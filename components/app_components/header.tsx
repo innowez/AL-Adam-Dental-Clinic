@@ -1,13 +1,19 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import mobileLogo from "@/assets/mobile_logo.png";
+import logo from "@/assets/logo.png";
 
 function Header() {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path ? "bg-[#24B6B614] rounded-full font-medium" : "";
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 shadow-lg">
-      <div className="flex justify-between px-4 py-3">
-        <div className="flex gap-3">
+    <header className="fixed lg:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white lg:bg-transparent lg:shadow-none">
+      <div className="flex justify-between items-center px-4 py-3 lg:py-7 lg:pl-12 lg:pr-14">
+        <div className="flex gap-3 lg:hidden">
           <div className="hamburger w-9 p-1 flex flex-col justify-between">
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
@@ -22,8 +28,50 @@ function Header() {
             />
           </div>
         </div>
-        <div className="flex gap-1">
-          <button className="w-9 h-9 flex items-center justify-center rounded-full bg-[#01DF3C]">
+
+        <div className="hidden lg:flex items-center gap-16">
+          <Image
+            src={logo.src}
+            alt="logo"
+            width={72}
+            height={72}
+          />
+          <nav>
+            <ul className="flex gap-1">
+              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/')}`}>
+                <Link href="/">Home</Link></li>
+              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/services')}`}>
+                <Link href="/services">Services</Link></li>
+              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/doctors')}`}>
+                <Link href="/doctors">Doctors</Link></li>
+              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/about')}`}>
+                <Link href="/about">About Us</Link></li>
+              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/blog')}`}>
+                <Link href="/blog">Blog</Link></li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <div className="flex gap-1 lg:gap-2">
+          <button className="hidden lg:flex items-center gap-2 mr-0 lg:mr-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="20"
+              fill="none"
+              viewBox="0 0 23 20"
+            >
+              <path
+                fill="#fff"
+                d="m10.9 20 4.55-12h2.1l4.55 12H20l-1.075-3.05h-4.85L13 20zM3 17l-1.4-1.4 5.05-5.05a11.6 11.6 0 0 1-1.588-2Q4.349 7.425 3.75 6h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T11.1 4H0V2h7V0h2v2h7v2h-2.9q-.525 1.8-1.575 3.7T9.45 10.6l2.4 2.45-.75 2.05-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z"
+              ></path>
+            </svg>
+            <span className="text-white font-medium text-[20px]">
+              العربية
+            </span>
+          </button>
+          <button className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-[#01DF3C]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
@@ -37,7 +85,7 @@ function Header() {
               ></path>
             </svg>
           </button>
-          <button className="h-9 w-28 flex items-center justify-center rounded-full bg-primary text-white">
+          <button className="h-9 lg:h-12 px-2 lg:px-5 lg:text-xl flex items-center justify-center rounded-full bg-primary text-white">
             Contact Us
           </button>
         </div>
@@ -47,3 +95,4 @@ function Header() {
 }
 
 export default Header;
+

@@ -4,9 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #24B6B6;
+  --color-primary: #24b6b6;
   --color-secondary: #224998;
-  --color-tertiary: #2C2E83;
+  --color-tertiary: #2c2e83;
 }
 
 @theme inline {
@@ -125,7 +125,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+html {
+  font-family: "Jost", sans-serif;
 }

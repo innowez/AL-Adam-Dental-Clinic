@@ -1,0 +1,81 @@
+import Image from "next/image";
+import titleImage from "@/assets/blogs/titleblog.png";
+
+export default function HeroSection() {
+  const topicList = [
+    "Oral Hygiene",
+    "Dental Care",
+    "Cosmetic Dentistry",
+    "Orthodontics",
+    "Children’s Dental Care",
+    "Orthodontics",
+    "Dental Treatments",
+  ];
+  return (
+    <div className="mt-[76px] lg:mt-[126px]">
+      <section className="mb-7 lg:mb-12">
+        <h1 className="text-center text-[16px] lg:text-[48px] lg:leading-[69px] font-semibold text-secondary">
+          Dental Care Insights
+        </h1>
+        <p className="text-center text-[12px] lg:text-[20px] lg:leading-[29px] font-normal leading-[17px] text-secondary/75 mb-4 lg:mb-12 ">
+          Explore expert-written articles designed to help you understand{" "}
+          <br className="lg:hidden" />
+          dental health better, <br className="hidden lg:block" />
+          prevent common oral issues, and make <br className="lg:hidden" />
+          informed decisions about your smile.
+        </p>
+        <div className="flex justify-center gap-2 overflow-x-scroll w-full no-scrollbar">
+          {topicList.map((topic, index) => (
+            <button
+              key={index}
+              className="border border-primary text-primary px-3 py-2 rounded-full text-[14px] lg:text-[20px] "
+            >
+              <span className="whitespace-nowrap">{topic}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-7 px-4 lg:px-12">
+        <div className="flex flex-col lg:flex-row mb-5 lg:mb-12">
+          <div className="w-full lg:w-1/2 h-[253px] lg:h-[446px] rounded-[12px] lg:rounded-[20px] overflow-hidden mb-5 lg:mb-0">
+            <Image
+              src={titleImage}
+              width={709}
+              height={446}
+              alt=""
+              className="object-cover h-[253px] lg:h-[446px] rounded-[12px] lg:rounded-[20px] "
+            />
+          </div>
+          <div className="w-full lg:w-1/2 lg:py-[31px] lg:pl-12 flex flex-col justify-between">
+            <div className="mb-6">
+              <div className="mb-4 lg:mb-5">
+                <span className="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-[12px] lg:text-[20px]">
+                  Trending
+                </span>
+              </div>
+              <div className="mt-2">
+                <h2 className="text-secondary text-[16px] lg:text-[36px] font-semibold leading-[23px] lg:leading-[52px]">
+                  Understanding Tooth Anatomy: Inside and Out
+                </h2>
+                <p className="text-secondary/75 text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px]">
+                  Discover how enamel, dentin, and pulp collaborate to safeguard
+                  your teeth and promote lasting oral health. Understanding
+                  their roles is crucial for maintaining a healthy smile over
+                  the years...
+                </p>
+              </div>
+            </div>
+            <div>
+              <button className=" px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr className="w-full border-primary/30 lg:border-primary" />
+      </section>
+    </div>
+  );
+}
