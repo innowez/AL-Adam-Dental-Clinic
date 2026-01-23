@@ -345,7 +345,7 @@ function HeroSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-3 lg:p-8 rounded-4xl min-h-[174px] lg:min-h-[342px] flex flex-col justify-between "
+              className="p-3 lg:p-8 rounded-4xl min-h-[174px] lg:min-h-[342px] flex flex-col lg:justify-between "
               style={{
                 background:
                   "linear-gradient(216.46deg, #89FFFF -36.09%, #224998 110.03%)",
@@ -356,7 +356,7 @@ function HeroSection() {
                 <h1 className="text-[16px] lg:text-[32px] font-semibold text-white leading-[17px] lg:leading-[46px] mb-2">
                   {service.title}
                 </h1>
-                <p className="text-[12px] lg:text-[20px] font-normal text-white/75 leading-3 lg:leading-[29px]">
+                <p className="text-[12px] lg:text-[20px] font-normal text-white/75 leading-[17px] lg:leading-[29px]">
                   {service.description}
                 </p>
               </div>

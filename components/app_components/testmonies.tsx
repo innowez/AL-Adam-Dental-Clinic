@@ -6,12 +6,12 @@ import testimonial3 from "@/assets/landing/testm3.png";
 export default function Testmonies() {
   return (
     <section className="mb-6 lg:mb-16">
-      <div className="flex flex-col items-center gap-2 mb-4 lg:mb-12">
+      <div className="flex flex-col items-center gap-2 mb-3 lg:mb-10">
         <h1 className="text-tertiary text-[12px] lg:text-[20px] lg:leading-[29px] rounded-full border border-tertiary px-2 py-0.5 lg:mb-2 inline-block ">
           Testimonials
         </h1>
 
-        <h2 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px] lg:mb-4">
+        <h2 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px]">
           What Our Patients Say
         </h2>
       </div>
