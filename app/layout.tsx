@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
+import { Aboreto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/app_components/header";
 import Footer from "@/components/app_components/footer";
@@ -7,6 +8,11 @@ import Footer from "@/components/app_components/footer";
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
+});
+
+const aboreto = Aboreto({
+  variable: "--font-aboreto",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jost.variable} antialiased`}>
+      <body className={`${jost.variable} ${aboreto.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
