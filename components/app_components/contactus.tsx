@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Contactus() {
   return (
     <section className="mb-6 flex flex-col lg:flex-row gap-2">
-      <div className="bg-[#EEFAFA] rounded-[16px] p-2 lg:p-9 mb-4 lg:mb-0 lg:w-full  ">
+      <div className="bg-[#EEFAFA] rounded-[16px] p-2 lg:p-9 mb-4 lg:mb-0 lg:w-full">
         <h1 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px] mb-2">
           We are here to Help You
         </h1>
@@ -14,7 +14,7 @@ export default function Contactus() {
           Have a question or need a consultation? Get in touch with our team and
           we’ll guide you with the right dental care.
         </h2>
-        <div className="lg:h-[356px]">
+        <div className="lg:h-[356px]" id="contact">
           <Image
             src={mapImage.src}
             alt="mapImage"

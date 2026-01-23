@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import arabi1 from "@/assets/landing/arabi1.png";
 import arabi2 from "@/assets/landing/arabi2.png";
@@ -175,6 +177,13 @@ function HeroSection() {
     },
   ];
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: document.getElementById("contact")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="mt-[60px] lg:mt-0 p-4 lg:pt-5 lg:px-12 ">
       <section className="flex mb-7 gap-4 lg:mb-[72px]">
@@ -234,7 +243,10 @@ function HeroSection() {
             personalized dental treatments.
           </p>
 
-          <button className="h-9 lg:h-auto text-[14px] flex items-center justify-center rounded-full bg-primary text-white lg:text-xl px-4 lg:px-5 lg:py-2">
+          <button
+            className="h-9 lg:h-auto text-[14px] flex items-center justify-center rounded-full bg-primary text-white lg:text-xl px-4 lg:px-5 lg:py-2"
+            onClick={() => handleScroll()}
+          >
             Contact Us
           </button>
         </div>
@@ -371,7 +383,10 @@ function HeroSection() {
               Thoughtful dental care designed to make every visit comfortable,
               informed, and stress-free.
             </p>
-            <button className="px-3.5 py-1 h-9 rounded-full bg-primary text-white min-w-[99px] lg:max-w-[133px] text-sm ">
+            <button
+              className="px-3.5 py-1 h-9 rounded-full bg-primary text-white min-w-[99px] lg:max-w-[133px] text-sm "
+              onClick={() => handleScroll()}
+            >
               Contact Us
             </button>
           </div>

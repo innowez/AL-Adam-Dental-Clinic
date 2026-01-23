@@ -13,6 +13,13 @@ function Header() {
     pathname === path ? "bg-[#24B6B614] rounded-full font-medium" : "";
   const [openMenu, setOpenMenu] = useState(false);
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: document.getElementById("contact")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header className="fixed lg:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white lg:bg-transparent lg:shadow-none">
       <div className="flex justify-between items-center px-4 py-3 lg:py-7 lg:pl-12 lg:pr-14">
@@ -98,7 +105,10 @@ function Header() {
               ></path>
             </svg>
           </button>
-          <button className="h-9 lg:h-12 px-2 lg:px-5 lg:text-xl flex items-center justify-center rounded-full bg-primary text-white">
+          <button
+            onClick={handleScroll}
+            className="h-9 lg:h-12 px-2 lg:px-5 lg:text-xl flex items-center justify-center rounded-full bg-primary text-white"
+          >
             Contact Us
           </button>
         </div>
