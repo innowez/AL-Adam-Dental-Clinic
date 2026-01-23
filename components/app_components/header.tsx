@@ -1,24 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import mobileLogo from "@/assets/mobile_logo.png";
 import logo from "@/assets/logo.png";
+import { AnimatePresence, motion } from "motion/react";
 
 function Header() {
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path ? "bg-[#24B6B614] rounded-full font-medium" : "";
+  const isActive = (path: string) =>
+    pathname === path ? "bg-[#24B6B614] rounded-full font-medium" : "";
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className="fixed lg:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white lg:bg-transparent lg:shadow-none">
       <div className="flex justify-between items-center px-4 py-3 lg:py-7 lg:pl-12 lg:pr-14">
         <div className="flex gap-3 lg:hidden">
-          <div className="hamburger w-9 p-1 flex flex-col justify-between">
+          <button
+            onClick={() => setOpenMenu(true)}
+            className="hamburger w-9 p-1 flex flex-col justify-between"
+          >
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
-          </div>
+          </button>
           <div className="logo">
             <Image
               src={mobileLogo.src}
@@ -30,28 +36,37 @@ function Header() {
         </div>
 
         <div className="hidden lg:flex items-center gap-16">
-          <Image
-            src={logo.src}
-            alt="logo"
-            width={72}
-            height={72}
-          />
+          <Image src={logo.src} alt="logo" width={72} height={72} />
           <nav>
             <ul className="flex gap-1">
-              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/')}`}>
-                <Link href="/">Home</Link></li>
-              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/services')}`}>
-                <Link href="/services">Services</Link></li>
-              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/doctors')}`}>
-                <Link href="/doctors">Doctors</Link></li>
-              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/about')}`}>
-                <Link href="/about">About Us</Link></li>
-              <li className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive('/blog')}`}>
-                <Link href="/blog">Blog</Link></li>
+              <li
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/")}`}
+              >
+                <Link href="/">Home</Link>
+              </li>
+              <li
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/services")}`}
+              >
+                <Link href="/services">Services</Link>
+              </li>
+              <li
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/doctors")}`}
+              >
+                <Link href="/doctors">Doctors</Link>
+              </li>
+              <li
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/about")}`}
+              >
+                <Link href="/about">About Us</Link>
+              </li>
+              <li
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/blog")}`}
+              >
+                <Link href="/blog">Blog</Link>
+              </li>
             </ul>
           </nav>
         </div>
-
 
         <div className="flex gap-1 lg:gap-2">
           <button className="hidden lg:flex items-center gap-2 mr-0 lg:mr-4">
@@ -67,9 +82,7 @@ function Header() {
                 d="m10.9 20 4.55-12h2.1l4.55 12H20l-1.075-3.05h-4.85L13 20zM3 17l-1.4-1.4 5.05-5.05a11.6 11.6 0 0 1-1.588-2Q4.349 7.425 3.75 6h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T11.1 4H0V2h7V0h2v2h7v2h-2.9q-.525 1.8-1.575 3.7T9.45 10.6l2.4 2.45-.75 2.05-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z"
               ></path>
             </svg>
-            <span className="text-white font-medium text-[20px]">
-              العربية
-            </span>
+            <span className="text-white font-medium text-[20px]">العربية</span>
           </button>
           <button className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-[#01DF3C]">
             <svg
@@ -90,9 +103,102 @@ function Header() {
           </button>
         </div>
       </div>
+      <AnimatePresence>
+        {openMenu && (
+          <>
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 z-40 h-screen "></div>
+            <motion.div
+              initial={{ opacity: 0, x: "-100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "-100%" }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              className="absolute top-0 left-0 z-50 w-full h-full"
+            >
+              <div className="absolute top-0 left-0  z-50 h-[calc(100vh-80px)] w-[90%] bg-white">
+                <div className="bg-white shadow-lg px-4 py-3 mb-7 ">
+                  <div className="flex gap-3 items-center">
+                    <button onClick={() => setOpenMenu(false)} className="logo">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="none"
+                        viewBox="0 0 22 22"
+                      >
+                        <path
+                          fill="#24B6B6"
+                          d="M11 13.342 2.802 21.54q-.46.46-1.17.46-.712 0-1.172-.46T0 20.369q0-.712.46-1.171L8.658 11 .46 2.802Q0 2.342 0 1.632 0 .92.46.46T1.631 0t1.171.46L11 8.658 19.198.46q.46-.46 1.17-.46.712 0 1.172.46T22 1.631q0 .711-.46 1.171L13.342 11l8.198 8.198q.46.46.46 1.17 0 .712-.46 1.172t-1.171.46q-.712 0-1.171-.46z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div className="flex gap-2">
+                      <h1 className="text-[20px] font-medium text-secondary">
+                        Menu
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+
+                <nav>
+                  <ul className="flex flex-col gap-5 px-4">
+                    <li>
+                      <Link
+                        href="/"
+                        className="text-[20px] text-secondary"
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/services"
+                        className="text-[20px] text-secondary"
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/doctors"
+                        className="text-[20px] text-secondary"
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        Doctors
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="text-[20px] text-secondary"
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/blog"
+                        className="text-[20px] text-secondary"
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        Blog
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
 
 export default Header;
-

@@ -80,11 +80,14 @@ export default function DoctorsList() {
             key={index}
             className="h-[433px] lg:h-[520px] rounded-[24px] p-4 bg-[#EEFAFA] relative overflow-hidden"
           >
-            <Image
-              src={doctor.image}
-              alt={doctor.name}
-              className="absolute -bottom-14"
-            />
+            <div className="absolute bottom-0 w-full h-[350px]">
+              <Image
+                src={doctor.image}
+                alt={doctor.name}
+                fill
+                className="object-cover"
+              />
+            </div>
             <h3 className="lg:text-2xl text-base font-semibold text-secondary lg:leading-[35px] leading-[23px] mb-2">
               {doctor.name}
             </h3>
