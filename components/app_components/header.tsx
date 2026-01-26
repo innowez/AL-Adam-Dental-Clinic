@@ -21,9 +21,9 @@ function Header() {
   };
 
   return (
-    <header className="fixed lg:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white lg:bg-transparent lg:shadow-none">
+    <header className="fixed xl:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white xl:bg-transparent xl:shadow-none">
       <div className="flex justify-between items-center px-4 py-3 lg:py-7 lg:pl-12 lg:pr-14">
-        <div className="flex gap-3 lg:hidden">
+        <div className="flex gap-3 xl:hidden">
           <button
             onClick={() => setOpenMenu(true)}
             className="hamburger w-9 p-1 flex flex-col justify-between"
@@ -42,7 +42,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center gap-16">
+        <div className="hidden xl:flex items-center gap-16">
           <Image src={logo.src} alt="logo" width={72} height={72} />
           <nav>
             <ul className="flex gap-1">

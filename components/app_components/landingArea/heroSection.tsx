@@ -185,10 +185,10 @@ function HeroSection() {
   };
 
   return (
-    <div className="mt-[60px] lg:mt-0 p-4 lg:pt-5 lg:px-12 ">
-      <section className="flex mb-7 gap-4 lg:mb-[72px]">
+    <div className="mt-[60px] xl:mt-0 p-4 xl:pt-5 xl:px-12 ">
+      <section className="flex mb-7 gap-2 sm:gap-4 lg:mb-[72px]">
         <div
-          className="px-2 py-2.5 lg:px-12 lg:pt-[111px] lg:mt-[90px] rounded-[26px] w-[200px] lg:w-1/2 "
+          className="px-2 py-2.5 lg:px-12 xl:pt-[111px] md:mt-[10px] lg:mt-[50px] xl:mt-[90px] rounded-[26px] max-w-[200px] sm:max-w-full sm:w-1/2 "
           style={{
             background:
               "linear-gradient(180deg, rgba(36, 182, 182, 0.016) 0%, rgba(36, 182, 182, 0.08) 100%)",
@@ -250,7 +250,7 @@ function HeroSection() {
             Contact Us
           </button>
         </div>
-        <div className="relative rounded-[26px] overflow-hidden w-[149px] min-h-[250px] lg:h-[610px] lg:w-1/2">
+        <div className="relative rounded-[26px] overflow-hidden min-w-[139px] w-full min-h-[250px] md:mt-[10px] lg:mt-[50px] xl:mt-0 lg:h-[610px] sm:w-1/2">
           <Image
             src={heroImage.src}
             alt="heroImage"
@@ -261,7 +261,7 @@ function HeroSection() {
       </section>
 
       <section className="block lg:flex lg:justify-between items-center lg:mb-[72px]">
-        <div className="hidden lg:block w-[437px]">
+        <div className="hidden xl:block w-[437px]">
           <h1 className="text-[28px] font-semibold text-secondary leading-[40px] mb-5">
             Your Comfort and Safety <br />
             Come First
@@ -272,7 +272,7 @@ function HeroSection() {
           </h2>
         </div>
 
-        <div className="flex justify-between lg:gap-14 mb-7">
+        <div className="flex justify-between lg:gap-14 mb-7 w-full xl:w-auto">
           <div className="lg:px-10 min-w-[85px]">
             <h1 className="text-[20px] lg:text-4xl font-semibold text-secondary leading-6 lg:leading-[52px] text-center lg:text-left">
               15+
@@ -336,7 +336,7 @@ function HeroSection() {
               for every stage of life.
             </h4>
           </div>
-          <button className="px-4 py-1 h-9 rounded-full bg-primary text-white">
+          <button className="px-4 py-1 h-9 text-[12px] lg:text-xl rounded-full bg-primary text-white">
             View All
           </button>
         </div>
@@ -353,10 +353,10 @@ function HeroSection() {
             >
               <div className="mb-2">{service.icon?.()}</div>
               <div>
-                <h1 className="text-[16px] lg:text-[32px] font-semibold text-white leading-[17px] lg:leading-[46px] mb-2">
+                <h1 className="text-[16px] lg:text-2xl xl:text-[32px] font-semibold text-white leading-[17px] lg:leading-[29px] xl:leading-[46px] mb-2">
                   {service.title}
                 </h1>
-                <p className="text-[12px] lg:text-[20px] font-normal text-white/75 leading-[17px] lg:leading-[29px]">
+                <p className="text-[12px] lg:text-base xl:text-[20px] font-normal text-white/75 leading-[17px] lg:leading-[29px] xl:leading-[29px]">
                   {service.description}
                 </p>
               </div>
@@ -367,7 +367,7 @@ function HeroSection() {
 
       {/*Why patients choose us */}
       <section className="mb-6 lg:mb-16">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
           <div>
             <h2 className="text-tertiary text-[12px] lg:text-xl rounded-full border border-tertiary px-4 py-0.5 mb-4 inline-block">
               Why us
@@ -378,7 +378,7 @@ function HeroSection() {
             </h2>
           </div>
 
-          <div className="flex flex-row lg:flex-col gap-2 mb-4 lg:max-w-[437px]">
+          <div className="flex justify-between items-center lg:items-start flex-row xl:flex-col gap-2 mb-4 w-full xl:max-w-[437px]">
             <p className="text-[12px] lg:text-[20px] font-normal text-[#22499899] leading-3 lg:leading-[29px]">
               Thoughtful dental care designed to make every visit comfortable,
               informed, and stress-free.
