@@ -1,0 +1,112 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "hero": {
+    "title": "Advanced & Gentle Dental Care You Can Trust",
+    "description": "Experienced specialists providing safe, comfortable, and personalized dental treatments.",
+    "contactUs": "Contact Us",
+    "happy": "Happy",
+    "client": "Clients"
+  },
+  "firstSection": {
+    "title1": "Your Comfort and Safety",
+    "title2": "Come First",
+    "description": "We prioritize patient comfort, clear communication, and clinical excellence for a stress-free dental experience.",
+
+    "experienced": "Experienced",
+    "DentalSpecialists": "dental specialists",
+    "modern": "Modern",
+    "Equipment": "equipment",
+    "happy": "Happy",
+    "Patients": "Patients"
+  },
+
+  "services": {
+    "title": "Our Dental Services",
+    "description": "Comprehensive dental care tailored for every stage of life.",
+    "viewAll": "View All",
+    "generalDentistry": "General Dentistry",
+    "cosmeticDentistry": "Cosmetic Dentistry",
+    "orthodontics": "Orthodontics",
+    "teethAlignmentSolutions": "Teeth alignment solutions to improve function and appearance for all age groups.",
+    "pediatricDentistry": "Pediatric Dentistry",
+    "rootCanalTreatment": "Root Canal Treatment",
+    "regularCheckUps": "Regular check-ups and cleanings to keep your teeth and gums healthy.",
+    "dentalImplants": "Dental Implants",
+    "generalDentistryDescription": "Regular check-ups and cleanings to keep your teeth and gums healthy.",
+    "cosmeticDentistryDescription": "Safe and effective treatments to enhance your smile.",
+    "pediatricDentistryDescription": "Gentle and friendly dental care tailored specifically for children",
+    "dentalImplantsDescription": "Permanent tooth replacement solutions that restore comfort and confidence."
+  },
+
+  "whyUs": {
+    "title": "Why us",
+    "description": "Why Patients Choose Us",
+    "thoughtfulDentalCare": "Thoughtful dental care designed to make every visit comfortable, informed, and stress-free.",
+    "experiencedSpecialists": "Experienced Specialists",
+    "caringDentalServices": "Caring dental services that ensure every visit is comfortable and stress-free.",
+    "patientComfortFirst": "Patient Comfort First",
+    "gentleProcedures": "Gentle procedures with a strong focus on pain management and care.",
+    "strictHygieneStandards": "Strict Hygiene Standards",
+    "internationalSterilization": "International sterilization and safety protocols followed consistently.",
+    "transparentCommunication": "Transparent Communication",
+    "clearExplanations": "Clear explanations and honest guidance before every treatment.",
+    "contactUs": "Contact Us"
+  },
+
+  "doctors": {
+    "title": "Doctors",
+    "description": "Meet Our Dental Experts",
+    "dr1": "Dr. Ahmed Al-Harthy (MBBS)",
+    "dr2": "Fatima Al-Balushi (MBBS)",
+    "dr3": "Dr. Ahmed Al-Harthy (MBBS)",
+    "dr4": "Dr. Mohammed (MBBS)",
+    "dr1Field": "General & Cosmetic Dentistry",
+    "dr2Field": "Orthodontics",
+    "dr3Field": "Oral & Maxillofacial Surgery",
+    "dr4Field": "Pediatric Dentistry"
+  },
+
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "What Our Patients Say",
+    "review1": "From the first consultation, the team was professional and reassuring. The dentist explained everything clearly and made me feel comfortable throughout the treatment.",
+    "review2": "I was nervous before my visit, but the doctors and staff were very patient and supportive. The treatment was smooth and handled with great care.",
+    "review3": "The clinic is clean, well-organized, and the doctors are highly experienced. I’m satisfied with the care I received and would recommend them to others."
+  },
+
+  "contactUs": {
+    "title": "We are here to Help You",
+    "description": "Have a question or need a consultation? Get in touch with our team and we’ll guide you with the right dental care.",
+    "name": "Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "message": "Message",
+    "submit": "Submit"
+  },
+
+  "newsletter": {
+    "title": "Subscribe Our Newsletter",
+    "description": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "headerFooter": {
+    "subscribe": "Subscribe",
+    "contactUs": "Contact Us",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "about": "About",
+    "doctors": "Doctors",
+    "blog": "Blog",
+    "blogs": "Blogs",
+    "faq": "FAQ",
+    "submit": "Submit",
+    "help": "Help",
+    "helpCenter": "Help center",
+    "support": "Support",
+    "copyright": "Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights Reserved."
+  }
+}

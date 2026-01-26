@@ -1,18 +1,19 @@
 import React from "react";
 import mapImage from "@/assets/landing/mapImg.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Contactus() {
+  const t = useTranslations("contactUs");
   return (
     <section className="mb-6 flex flex-col xl:flex-row gap-2">
       <div className="bg-[#EEFAFA] rounded-[16px] p-2 lg:p-9 mb-4 lg:mb-0 lg:w-full">
         <h1 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px] mb-2">
-          We are here to Help You
+          {t("title")}
         </h1>
 
         <h2 className="text-[12px] lg:text-[16px] font-normal text-secondary leading-4 lg:leading-[22px] mb-6">
-          Have a question or need a consultation? Get in touch with our team and
-          we’ll guide you with the right dental care.
+          {t("description")}
         </h2>
         <div className="lg:h-[356px] sm:w-full sm:h-full " id="contact">
           <Image
@@ -31,7 +32,7 @@ export default function Contactus() {
               htmlFor="name"
               className="text-[16px] font-normal text-secondary leading-6"
             >
-              Name
+              {t("name")}
             </label>
             <input
               type="text"
@@ -44,7 +45,7 @@ export default function Contactus() {
               htmlFor="email"
               className="text-[16px] font-normal text-secondary leading-6"
             >
-              Email
+              {t("email")}
             </label>
             <input
               type="email"
@@ -57,7 +58,7 @@ export default function Contactus() {
               htmlFor="phone_number"
               className="text-[16px] font-normal text-secondary leading-6"
             >
-              Phone Number
+              {t("phoneNumber")}
             </label>
             <input
               type="tel"
@@ -70,7 +71,7 @@ export default function Contactus() {
               htmlFor="message"
               className="text-[16px] font-normal text-secondary leading-6"
             >
-              Message
+              {t("message")}
             </label>
             <textarea
               name=""
@@ -83,7 +84,7 @@ export default function Contactus() {
             type="submit"
             className="bg-primary text-white rounded-full px-4 py-[11.5px] inline-block max-w-[110px]"
           >
-            Submit
+            {t("submit")}
           </button>
         </form>
       </div>

@@ -1,23 +1,36 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import mobileLogo from "@/assets/mobile_logo.png";
 import logo from "@/assets/logo.png";
 import { AnimatePresence, motion } from "motion/react";
+import { useLocale, useTranslations } from "next-intl";
 
 function Header() {
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
   const isActive = (path: string) =>
     pathname === path ? "bg-[#24B6B614] rounded-full font-medium" : "";
   const [openMenu, setOpenMenu] = useState(false);
+
+  const t = useTranslations("headerFooter");
 
   const handleScroll = () => {
     window.scrollTo({
       top: document.getElementById("contact")?.offsetTop || 0,
       behavior: "smooth",
     });
+  };
+  const isHomePage = pathname === "/";
+  console.log(pathname);
+
+  const currentLocale = locale;
+  const nextLocale = currentLocale === "en" ? "ar" : "en";
+
+  const onLanguageChange = () => {
+    router.replace(pathname, { locale: nextLocale });
   };
 
   return (
@@ -47,36 +60,49 @@ function Header() {
           <nav>
             <ul className="flex gap-1">
               <li
-                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/")}`}
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive(
+                  "/",
+                )}`}
               >
-                <Link href="/">Home</Link>
+                <Link href="/">{t("home")}</Link>
               </li>
               <li
-                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/services")}`}
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive(
+                  "/services",
+                )}`}
               >
-                <Link href="/services">Services</Link>
+                <Link href="/services">{t("services")}</Link>
               </li>
               <li
-                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/doctors")}`}
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive(
+                  "/doctors",
+                )}`}
               >
-                <Link href="/doctors">Doctors</Link>
+                <Link href="/doctors">{t("doctors")}</Link>
               </li>
               <li
-                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/about")}`}
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive(
+                  "/about",
+                )}`}
               >
-                <Link href="/about">About Us</Link>
+                <Link href="/about">{t("about")}</Link>
               </li>
               <li
-                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive("/blog")}`}
+                className={`px-4 py-[9.5px] text-[20px] text-tertiary ${isActive(
+                  "/blog",
+                )}`}
               >
-                <Link href="/blog">Blog</Link>
+                <Link href="/blog">{t("blog")}</Link>
               </li>
             </ul>
           </nav>
         </div>
 
         <div className="flex gap-1 lg:gap-2">
-          <button className="hidden lg:flex items-center gap-2 mr-0 lg:mr-4">
+          <button
+            className="hidden lg:flex items-center gap-2 mr-0 lg:mr-4 cursor-pointer "
+            onClick={onLanguageChange}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="23"
@@ -85,11 +111,15 @@ function Header() {
               viewBox="0 0 23 20"
             >
               <path
-                fill="#fff"
+                fill={isHomePage ? "#fff" : "#2c2e83"}
                 d="m10.9 20 4.55-12h2.1l4.55 12H20l-1.075-3.05h-4.85L13 20zM3 17l-1.4-1.4 5.05-5.05a11.6 11.6 0 0 1-1.588-2Q4.349 7.425 3.75 6h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T11.1 4H0V2h7V0h2v2h7v2h-2.9q-.525 1.8-1.575 3.7T9.45 10.6l2.4 2.45-.75 2.05-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z"
               ></path>
             </svg>
-            <span className="text-white font-medium text-[20px]">العربية</span>
+            <span
+              className={`${isHomePage ? "text-white" : "text-tertiary"} font-medium text-[20px]`}
+            >
+              {nextLocale === "ar" ? "العربية" : "English"}
+            </span>
           </button>
           <button className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-[#01DF3C]">
             <svg
@@ -109,7 +139,7 @@ function Header() {
             onClick={handleScroll}
             className="h-9 lg:h-12 px-2 lg:px-5 lg:text-xl flex items-center justify-center rounded-full bg-primary text-white"
           >
-            Contact Us
+            {t("contactUs")}
           </button>
         </div>
       </div>
