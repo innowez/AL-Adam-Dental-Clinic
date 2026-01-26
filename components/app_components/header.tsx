@@ -23,6 +23,7 @@ function Header() {
       behavior: "smooth",
     });
   };
+
   const isHomePage = pathname === "/";
   console.log(pathname);
 
