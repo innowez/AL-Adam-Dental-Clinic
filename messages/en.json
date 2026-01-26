@@ -83,7 +83,12 @@
     "email": "Email",
     "phoneNumber": "Phone Number",
     "message": "Message",
-    "submit": "Submit"
+    "submit": "Submit",
+
+    "pname": "Jamal Akbar",
+    "pemail": "Jamal Akbar@gmail.com",
+    "pphoneNumber": "587 965 8454",
+    "pmessage": "Message"
   },
 
   "newsletter": {

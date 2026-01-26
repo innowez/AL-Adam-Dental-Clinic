@@ -37,6 +37,7 @@ export default function Contactus() {
             <input
               type="text"
               id="name"
+              placeholder={t("pname")}
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             />
           </div>
@@ -50,6 +51,7 @@ export default function Contactus() {
             <input
               type="email"
               id="email"
+              placeholder={t("pemail")}
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             />
           </div>
@@ -63,6 +65,7 @@ export default function Contactus() {
             <input
               type="tel"
               id="phone_number"
+              placeholder={t("pphoneNumber")}
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             />
           </div>
@@ -77,6 +80,7 @@ export default function Contactus() {
               name=""
               id="message"
               rows={4}
+              placeholder={t("pmessage")}
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             ></textarea>
           </div>

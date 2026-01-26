@@ -84,7 +84,12 @@
     "email": "البريد الإلكتروني",
     "phoneNumber": "رقم الهاتف",
     "message": "الرسالة",
-    "submit": "إرسال"
+    "submit": "إرسال",
+
+    "pname": "جمال أكبر",
+    "pemail": "Jamal Akbar@gmail.com",
+    "pphoneNumber": "587 965 8454",
+    "pmessage": "الرسالة"
   },
 
   "newsletter": {
