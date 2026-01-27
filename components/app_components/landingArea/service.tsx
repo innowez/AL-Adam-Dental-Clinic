@@ -156,7 +156,7 @@ function Service() {
             {t("title")}
           </h3>
           <h4 className="text-[12px] lg:text-xl font-normal text-secondary leading-3 lg:text-center">
-            {t("description")}
+            {t("description")} <br className="lg:hidden" /> {t("description2")}
           </h4>
         </div>
         <button className="px-4 py-1 h-9 text-[12px] lg:text-xl rounded-full bg-primary text-white">

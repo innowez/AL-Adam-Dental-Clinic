@@ -24,7 +24,8 @@
 
   "services": {
     "title": "Our Dental Services",
-    "description": "Comprehensive dental care tailored for every stage of life.",
+    "description": "Comprehensive dental care tailored",
+    "description2": "for every stage of life.",
     "viewAll": "View All",
     "generalDentistry": "General Dentistry",
     "cosmeticDentistry": "Cosmetic Dentistry",
