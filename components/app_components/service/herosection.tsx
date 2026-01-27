@@ -10,72 +10,72 @@ import dece6 from "@/assets/service/dces6.png";
 import dece7 from "@/assets/service/dces7.png";
 import Testmonies from "../testmonies";
 import Contactus from "../contactus";
+import { useTranslations } from "next-intl";
 
 export default function ServiceHero() {
+  const t = useTranslations("servicePage");
   const dcesList = [
     {
       image: dece1,
-      title: "General Dentistry",
-      description:
-        "Routine dental care focused on prevention, diagnosis, and treatment of common oral health issues. Includes dental check-ups, cleanings, fillings, and oral hygiene guidance",
+      title: t("generalDentistry"),
+      description: t("generalDentistryDescription"),
       list: [
-        "Dental check-ups",
-        "Scaling & polishing",
-        "Tooth fillings",
-        "Gum care",
+        t("generalDentistryList.0"),
+        t("generalDentistryList.1"),
+        t("generalDentistryList.2"),
+        t("generalDentistryList.3"),
       ],
     },
     {
       image: dece2,
-      title: "Orthodontics",
-      description:
-        "Correct misaligned teeth and bite issues using modern orthodontic solutions tailored for both children and adults.",
-      list: ["Metal & ceramic braces", "Clear aligners", "Bite correction"],
+      title: t("orthodontics"),
+      description: t("orthodonticsDescription"),
+      list: [
+        t("orthodonticsList.0"),
+        t("orthodonticsList.1"),
+        t("orthodonticsList.2"),
+      ],
     },
     {
       image: dece3,
-      title: "Cosmetic Dentistry",
-      description:
-        "Enhance the appearance of your smile with safe and effective cosmetic dental treatments designed to improve tooth color, shape, and alignment.",
+      title: t("cosmeticDentistry"),
+      description: t("cosmeticDentistryDescription"),
       list: [
-        "Teeth whitening",
-        "Smile makeover",
-        "Veneers",
-        "Cosmetic fillings",
+        t("cosmeticDentistryList.0"),
+        t("cosmeticDentistryList.1"),
+        t("cosmeticDentistryList.2"),
+        t("cosmeticDentistryList.3"),
       ],
     },
     {
       image: dece4,
-      title: "Pediatric Dentistry",
-      description:
-        "Gentle and friendly dental care specially designed for children, focusing on early prevention and healthy oral development.",
+      title: t("pediatricDentistry"),
+      description: t("pediatricDentistryDescription"),
       list: [
-        "Child dental check-ups",
-        "Preventive treatments",
-        "Fluoride application",
-        "Oral hygiene education",
+        t("pediatricDentistryList.0"),
+        t("pediatricDentistryList.1"),
+        t("pediatricDentistryList.2"),
+        t("pediatricDentistryList.3"),
       ],
     },
     {
       image: dece5,
-      title: "Oral & Maxillofacial Surgery",
-      description:
-        "Advanced surgical dental procedures performed with precision, safety, and patient comfort as the top priority.",
+      title: t("oralAndMaxillofacialSurgery"),
+      description: t("oralAndMaxillofacialSurgeryDescription"),
       list: [
-        "Wisdom tooth removal",
-        "Surgical extractions",
-        "Dental trauma care",
+        t("oralAndMaxillofacialSurgeryList.0"),
+        t("oralAndMaxillofacialSurgeryList.1"),
+        t("oralAndMaxillofacialSurgeryList.2"),
       ],
     },
     {
       image: dece6,
-      title: "Root Canal Treatment",
-      description:
-        "Pain-free root canal procedures to save infected or damaged teeth and restore their natural function.",
+      title: t("rootCanalTreatment"),
+      description: t("rootCanalTreatmentDescription"),
       list: [
-        "Single & multi-root canals",
-        "Infection removal",
-        "Tooth restoration",
+        t("rootCanalTreatmentList.0"),
+        t("rootCanalTreatmentList.1"),
+        t("rootCanalTreatmentList.2"),
       ],
     },
   ];
@@ -91,15 +91,15 @@ export default function ServiceHero() {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
           <h1 className="text-white text-[20px] lg:text-[48px] font-bold leading-[29px] lg:leading-[69px]">
-            Our Services
+            {t("ourServices")}
           </h1>
           <p className="text-white text-[12px] lg:text-[20px] lg:leading-[29px] font-semibold flex gap-2 justify-center">
             <Link href="/" className="">
-              Home
+              {t("home")}
             </Link>
             /
             <Link href="/services" className="">
-              Services
+              {t("services")}
             </Link>
           </p>
         </div>
@@ -110,12 +110,13 @@ export default function ServiceHero() {
           <div className="hidden lg:block"></div>
           <div>
             <h1 className="lg:text-center text-[16px] lg:text-[48px] lg:leading-[69px] font-semibold text-secondary">
-              Dental Care for Every Smile
+              {t("dentalCareForEverySmile")}
             </h1>
             <p className="lg:text-center text-[12px] lg:text-[20px] lg:leading-[29px] font-normal leading-[17px] text-secondary/75">
-              Comprehensive dental care with modern <br className="lg:hidden" />
-              technology and <br className="hidden lg:block" />a patient-first
-              approach.
+              {t("comprehensiveDentalCareWithModern")}{" "}
+              <br className="lg:hidden" />
+              {t("technologyAnd")} <br className="hidden lg:block" />
+              {t("aPatientFirstApproach")}
             </p>
           </div>
           <div className="w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary flex items-center justify-center">

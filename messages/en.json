@@ -96,6 +96,89 @@
     "description": "Enter your email",
     "subscribe": "Subscribe"
   },
+
+  "servicePage": {
+    "ourServices": "Our Services",
+    "home": "Home",
+    "services": "Services",
+    "dentalCareForEverySmile": "Dental Care for Every Smile",
+
+    "comprehensiveDentalCareWithModern": "Comprehensive dental care with modern ",
+    "technologyAnd": "technology and ",
+    "aPatientFirstApproach": "a patient-first approach.",
+
+    "generalDentistry": "General Dentistry",
+    "generalDentistryDescription": "Routine dental care focused on prevention, diagnosis, and treatment of common oral health issues. Includes dental check-ups, cleanings, fillings, and oral hygiene guidance",
+    "generalDentistryList": [
+      "Dental check-ups",
+      "Scaling & polishing",
+      "Tooth fillings",
+      "Gum care"
+    ],
+    "orthodontics": "Orthodontics",
+    "orthodonticsDescription": "Correct misaligned teeth and bite issues using modern orthodontic solutions tailored for both children and adults.",
+    "orthodonticsList": [
+      "Metal & ceramic braces",
+      "Clear aligners",
+      "Bite correction"
+    ],
+    "cosmeticDentistry": "Cosmetic Dentistry",
+    "cosmeticDentistryDescription": "Enhance the appearance of your smile with safe and effective cosmetic dental treatments designed to improve tooth color, shape, and alignment.",
+    "cosmeticDentistryList": [
+      "Teeth whitening",
+      "Smile makeover",
+      "Veneers",
+      "Cosmetic fillings"
+    ],
+    "pediatricDentistry": "Pediatric Dentistry",
+    "pediatricDentistryDescription": "Gentle and friendly dental care specially designed for children, focusing on early prevention and healthy oral development.",
+    "pediatricDentistryList": [
+      "Child dental check-ups",
+      "Preventive treatments",
+      "Fluoride application",
+      "Oral hygiene education"
+    ],
+    "oralAndMaxillofacialSurgery": "Oral & Maxillofacial Surgery",
+    "oralAndMaxillofacialSurgeryDescription": "Advanced surgical dental procedures performed with precision, safety, and patient comfort as the top priority.",
+    "oralAndMaxillofacialSurgeryList": [
+      "Wisdom tooth removal",
+      "Surgical extractions",
+      "Dental trauma care"
+    ],
+    "rootCanalTreatment": "Root Canal Treatment",
+    "rootCanalTreatmentDescription": "Pain-free root canal procedures to save infected or damaged teeth and restore their natural function.",
+    "rootCanalTreatmentList": [
+      "Single & multi-root canals",
+      "Infection removal",
+      "Tooth restoration"
+    ]
+  },
+
+  "doctorPage": {
+    "ourDoctors": "Our Doctors",
+    "home": "Home",
+    "doctors": "Doctors",
+    "ourDentalSpecialists": "Our Dental Specialists",
+
+    "meetTheExperiencedDentistsBehind": "Meet our dedicated dental team, focused on delivering",
+    "safeAndComfortable": "safe and comfortable",
+    "careUsingModernTechniquesAnd": "care using modern techniques and",
+    "bestPractices": "best practices.",
+    "viewProfile": "View Profile",
+
+    "dr1Name": "Dr. Ahmed Al-Harthy",
+    "dr1Specialty": "General & Cosmetic Dentistry",
+
+    "dr2Name": "Dr. Amina Al-Harthy (MBBS)",
+    "dr3Specialty": "Oral & Maxillofacial Surgery",
+
+    "dr3Name": "Dr. Fatima Al-Balushi (MBBS)",
+    "dr2Specialty": "Orthodontics",
+
+    "dr4Name": "Dr. Mohammed (MBBS)",
+    "dr4Specialty": "Pediatric Dentistry"
+  },
+
   "headerFooter": {
     "subscribe": "Subscribe",
     "contactUs": "Contact Us",

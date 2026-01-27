@@ -97,6 +97,89 @@
     "description": "أدخل بريدك الإلكتروني",
     "subscribe": "اشترك"
   },
+
+  "servicePage": {
+    "ourServices": "خدماتنا",
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "dentalCareForEverySmile": "رعاية أسنان لكل ابتسامة",
+    "comprehensiveDentalCareWithModern": "رعاية أسنان شاملة باستخدام أحدث",
+    "technologyAnd": "التقنيات ونهج",
+    "aPatientFirstApproach": "يركّز على المريض أولاً.",
+
+    "generalDentistry": "طب الأسنان العام",
+    "generalDentistryDescription": "رعاية أسنان روتينية تركز على الوقاية والتشخيص وعلاج مشاكل صحة الفم الشائعة، وتشمل الفحوصات والتنظيف والحشوات وإرشادات العناية بصحة الفم.",
+    "generalDentistryList": [
+      "فحوصات الأسنان",
+      "تنظيف وتلميع الأسنان",
+      "حشوات الأسنان",
+      "العناية باللثة"
+    ],
+
+    "orthodontics": "تقويم الأسنان",
+    "orthodonticsDescription": "تصحيح عدم انتظام الأسنان ومشاكل الإطباق باستخدام حلول تقويم حديثة تناسب الأطفال والبالغين.",
+    "orthodonticsList": ["تقويم معدني وخزفي", "تقويم شفاف", "تصحيح الإطباق"],
+
+    "cosmeticDentistry": "طب الأسنان التجميلي",
+    "cosmeticDentistryDescription": "تحسين مظهر ابتسامتك من خلال علاجات تجميلية آمنة وفعّالة تهدف إلى تحسين لون وشكل ومحاذاة الأسنان.",
+    "cosmeticDentistryList": [
+      "تبييض الأسنان",
+      "تصميم الابتسامة",
+      "قشور الأسنان",
+      "حشوات تجميلية"
+    ],
+
+    "pediatricDentistry": "طب أسنان الأطفال",
+    "pediatricDentistryDescription": "رعاية أسنان لطيفة وودودة مصممة خصيصًا للأطفال، مع التركيز على الوقاية المبكرة والنمو الصحي للفم.",
+    "pediatricDentistryList": [
+      "فحوصات أسنان الأطفال",
+      "علاجات وقائية",
+      "تطبيق الفلورايد",
+      "التثقيف على نظافة الفم"
+    ],
+
+    "oralAndMaxillofacialSurgery": "جراحة الفم والوجه والفكين",
+    "oralAndMaxillofacialSurgeryDescription": "إجراءات جراحية متقدمة للأسنان تُجرى بدقة وأمان مع إعطاء راحة المريض الأولوية القصوى.",
+    "oralAndMaxillofacialSurgeryList": [
+      "إزالة ضرس العقل",
+      "الخلع الجراحي",
+      "علاج إصابات الأسنان"
+    ],
+
+    "rootCanalTreatment": "علاج قناة الجذر",
+    "rootCanalTreatmentDescription": "إجراءات علاج قناة الجذر بدون ألم للحفاظ على الأسنان المصابة أو التالفة واستعادة وظيفتها الطبيعية.",
+    "rootCanalTreatmentList": [
+      "قنوات جذر مفردة ومتعددة",
+      "إزالة الالتهابات",
+      "ترميم الأسنان"
+    ]
+  },
+
+  "doctorPage": {
+    "ourDoctors": "أطبائنا",
+    "home": "الرئيسية",
+    "doctors": "الأطباء",
+    "ourDentalSpecialists": "أخصائيو الأسنان لدينا",
+
+    "meetTheExperiencedDentistsBehind": "تعرّف على فريقنا المتخصص من أطباء الأسنان، المكرّس لتقديم",
+    "safeAndComfortable": "رعاية آمنة ومريحة",
+    "careUsingModernTechniquesAnd": "باستخدام أحدث التقنيات واتباع",
+    "bestPractices": "أفضل الممارسات.",
+    "viewProfile": "عرض الملف الشخصي",
+
+    "dr1Name": "د. أحمد الحارثي",
+    "dr1Specialty": "طب الأسنان العام والتجميلي",
+
+    "dr2Name": "د. أمينة الحارثي (MBBS)",
+    "dr2Specialty": "تقويم الأسنان",
+
+    "dr3Name": "د. فاطمة البلوشي (MBBS)",
+    "dr3Specialty": "جراحة الفم والوجه والفكين",
+
+    "dr4Name": "د. محمد (MBBS)",
+    "dr4Specialty": "طب أسنان الأطفال"
+  },
+
   "headerFooter": {
     "contactUs": "اتصل بنا",
     "quickLinks": "روابط سريعة",

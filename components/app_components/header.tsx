@@ -25,7 +25,6 @@ function Header() {
   };
 
   const isHomePage = pathname === "/";
-  console.log(pathname);
 
   const currentLocale = locale;
   const nextLocale = currentLocale === "en" ? "ar" : "en";
