@@ -14,8 +14,10 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Doctors() {
+  const t = useTranslations("doctors");
   const [api, setApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
@@ -35,24 +37,24 @@ export default function Doctors() {
   }, [api]);
   const docterList = [
     {
-      name: "Dr. Ahmed Al-Harthy (MBBS) ",
-      field: "General & Cosmetic Dentistry",
+      name: t("dr1"),
+      field: t("dr1Field"),
       image: docter1,
       pos: "",
     },
     {
-      name: "Fatima Al-Balushi (MBBS)",
-      field: "Orthodontics",
+      name: t("dr2"),
+      field: t("dr2Field"),
       image: docter2,
     },
     {
-      name: "Dr. Ahmed Al-Harthy (MBBS) ",
-      field: "Oral & Maxillofacial Surgery",
+      name: t("dr3"),
+      field: t("dr3Field"),
       image: docter3,
     },
     {
-      name: "Dr. Mohammed (MBBS)",
-      field: "Pediatric Dentistry",
+      name: t("dr4"),
+      field: t("dr4Field"),
       image: docter4,
     },
   ];
@@ -61,11 +63,11 @@ export default function Doctors() {
       <div className="flex items-end justify-between mb-4">
         <div className="">
           <h1 className="text-tertiary text-[12px] xl:text-xl rounded-full border border-tertiary px-2 py-0.5 mb-4 inline-block ">
-            Doctors
+            {t("title")}
           </h1>
 
           <h2 className="text-[16px] sm:text-[24px] lg:text-[32px] xl:text-[48px] font-semibold text-secondary leading-6 lg:leading-[48px] xl:leading-[69px]">
-            Meet Our Dental Experts
+            {t("description")}
           </h2>
         </div>
         <div className="hidden md:block">

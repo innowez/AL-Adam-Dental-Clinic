@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import logo from "@/assets/landing/footerLogo.png";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("headerFooter");
   return (
     <footer
       style={{
@@ -14,82 +16,88 @@ function Footer() {
     >
       <div className="flex flex-col lg:flex-row justify-between ">
         <div className="mb-8">
-          <Image src={logo.src} alt="logo" width={145.37} height={57} className="lg:w-[191px] lg:h-[75px] lg:mb-12" />
+          <Image
+            src={logo.src}
+            alt="logo"
+            width={145.37}
+            height={57}
+            className="lg:w-[191px] lg:h-[75px] lg:mb-12"
+          />
           <div className="mb-5 lg:block hidden">
-            <h3 className="text-[16px] lg:text-[28px] font-medium text-white leading-6 lg:leading-[40px] mb-3">Subscribe Our Newsletter</h3>
+            <h3 className="text-[16px] lg:text-[28px] font-medium text-white leading-6 lg:leading-[40px] mb-3">
+              {t("subscribe")}
+            </h3>
 
             <div className="flex gap-2">
-              <input type="text" placeholder="Enter your email" className="bg-white rounded-full px-4 py-2 w-full lg:w-[298px]" />
-              <button className="bg-primary text-white rounded-full px-4 py-2 ">Subscribe</button>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                className="bg-white rounded-full px-4 py-2 w-full lg:w-[298px]"
+              />
+              <button className="bg-primary text-white rounded-full px-4 py-2 ">
+                {t("subscribe")}
+              </button>
             </div>
           </div>
         </div>
         <div className="flex justify-between mb-8 lg:max-w-[552px] lg:w-full">
           <div>
             <h1 className="text-[20px] font-medium text-white leading-6">
-              Quick Links
+              {t("quickLinks")}
             </h1>
             <ul>
               <li className="text-[16px] font-normal text-white leading-6">
-                <Link href="/">
-                  Home
-                </Link>
+                <Link href="/">{t("home")}</Link>
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                <Link href="/services">
-                  Services
-                </Link>
+                <Link href="/services">{t("services")}</Link>
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                <Link href="/doctors">
-                  Doctors
-                </Link>
+                <Link href="/doctors">{t("doctors")}</Link>
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                <Link href="/about">
-                  About Us
-                </Link>
+                <Link href="/about">{t("aboutUs")}</Link>
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                <Link href="/blog">
-                  Blogs
-                </Link>
+                <Link href="/blog">{t("blogs")}</Link>
               </li>
             </ul>
           </div>
           <div>
             <h1 className="text-[20px] font-medium text-white leading-6">
-              Services
+              {t("services")}
             </h1>
             <ul>
               <li className="text-[16px] font-normal text-white leading-6">
-                Home
+                {t("home")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                Services
+                {t("services")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                Doctors
+                {t("doctors")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                About Us
+                {t("aboutUs")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                Blogs
+                {t("blogs")}
               </li>
             </ul>
           </div>
           <div>
-            <h1 className="text-[20px] font-medium text-white leading-6">Help</h1>
+            <h1 className="text-[20px] font-medium text-white leading-6">
+              {t("help")}
+            </h1>
             <ul>
               <li className="text-[16px] font-normal text-white leading-6">
-                FAQ
+                {t("faq")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                Help center
+                {t("helpCenter")}
               </li>
               <li className="text-[16px] font-normal text-white leading-6">
-                Support
+                {t("support")}
               </li>
             </ul>
           </div>
@@ -97,17 +105,27 @@ function Footer() {
       </div>
 
       <div className="mb-5 lg:hidden">
-        <h3 className="text-[16px] font-medium text-white leading-6 mb-3">Subscribe Our Newsletter</h3>
+        <h3 className="text-[16px] font-medium text-white leading-6 mb-3">
+          Subscribe Our Newsletter
+        </h3>
         <div className="flex gap-2">
-          <input type="text" placeholder="Enter your email" className="bg-white rounded-full px-4 py-2 w-full" />
-          <button className="bg-primary text-white rounded-full px-4 py-2 ">Submit</button>
+          <input
+            type="text"
+            placeholder="Enter your email"
+            className="bg-white rounded-full px-4 py-2 w-full"
+          />
+          <button className="bg-primary text-white rounded-full px-4 py-2 ">
+            {t("submit")}
+          </button>
         </div>
       </div>
 
       <hr className="text-white mb-5" />
 
       <div className="flex justify-between items-center">
-        <p className="text-[12px] lg:text-base font-normal text-white leading-4 lg:leading-[23px] " >Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights Reserved.</p>
+        <p className="text-[12px] lg:text-base font-normal text-white leading-4 lg:leading-[23px] ">
+          Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights Reserved.
+        </p>
         <div className="flex gap-2">
           <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white">
             <svg
@@ -124,18 +142,21 @@ function Footer() {
             </svg>
           </div>
 
-          <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white">  <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            fill="none"
-            viewBox="0 0 15 15"
-          >
-            <path
-              fill="#224998"
-              d="M15 7.5C15 3.36 11.64 0 7.5 0S0 3.36 0 7.5c0 3.63 2.58 6.653 6 7.35v-5.1H4.5V7.5H6V5.625A2.63 2.63 0 0 1 8.625 3H10.5v2.25H9a.75.75 0 0 0-.75.75v1.5h2.25v2.25H8.25v5.213A7.5 7.5 0 0 0 15 7.5"
-            ></path>
-          </svg></div>
+          <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white">
+            {" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              fill="none"
+              viewBox="0 0 15 15"
+            >
+              <path
+                fill="#224998"
+                d="M15 7.5C15 3.36 11.64 0 7.5 0S0 3.36 0 7.5c0 3.63 2.58 6.653 6 7.35v-5.1H4.5V7.5H6V5.625A2.63 2.63 0 0 1 8.625 3H10.5v2.25H9a.75.75 0 0 0-.75.75v1.5h2.25v2.25H8.25v5.213A7.5 7.5 0 0 0 15 7.5"
+              ></path>
+            </svg>
+          </div>
           <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -172,10 +193,8 @@ function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
   );
 }
 
 export default Footer;
-

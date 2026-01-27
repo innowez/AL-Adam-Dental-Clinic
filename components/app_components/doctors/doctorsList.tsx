@@ -9,38 +9,40 @@ import dotr6 from "@/assets/doctors/dotr6.png";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function DoctorsList() {
+  const t = useTranslations("doctorPage");
   const doctorsList = [
     {
       image: dotr1,
-      name: "Dr. Ahmed Al-Harthy (MBBS) ",
-      specialization: "General & Cosmetic Dentistry",
+      name: t("dr1Name"),
+      specialization: t("dr1Specialty"),
     },
     {
       image: dotr2,
-      name: "Dr. Amina Al-Harthy (MBBS)",
-      specialization: "Oral & Maxillofacial Surgery",
+      name: t("dr2Name"),
+      specialization: t("dr2Specialty"),
     },
     {
       image: dotr3,
-      name: "Dr. Fatima Al-Balushi (MBBS)",
-      specialization: "Orthodontics",
+      name: t("dr3Name"),
+      specialization: t("dr3Specialty"),
     },
     {
       image: dotr4,
-      name: "Dr. Mohammed (MBBS)",
-      specialization: "Pediatric Dentist",
+      name: t("dr4Name"),
+      specialization: t("dr4Specialty"),
     },
     {
       image: dotr5,
-      name: "Dr. Ahmed Al-Harthy (MBBS) ",
-      specialization: "General & Cosmetic Dentistry",
+      name: t("dr1Name"),
+      specialization: t("dr1Specialty"),
     },
     {
       image: dotr6,
-      name: "Dr. Amina Al-Harthy (MBBS)",
-      specialization: "Oral & Maxillofacial Surgery",
+      name: t("dr2Name"),
+      specialization: t("dr2Specialty"),
     },
   ];
 
@@ -52,14 +54,14 @@ export default function DoctorsList() {
           <div className="hidden lg:block"></div>
           <div>
             <h1 className="lg:text-center text-[16px] lg:text-[48px] lg:leading-[69px] font-semibold text-secondary">
-              Our Dental Specialists
+              {t("ourDentalSpecialists")}
             </h1>
             <p className="lg:text-center text-[12px] lg:text-[20px] lg:leading-[29px] font-normal leading-[17px] text-secondary/75">
-              Meet our dedicated dental team, focused on delivering{" "}
+              {t("meetTheExperiencedDentistsBehind")}{" "}
               <br className="lg:hidden" />
-              safe and comfortable <br className="hidden lg:block" /> care using
-              modern techniques and <br className="lg:hidden" />
-              best practices.
+              {t("safeAndComfortable")} <br className="hidden lg:block" />{" "}
+              {t("careUsingModernTechniquesAnd")} <br className="lg:hidden" />
+              {t("bestPractices")}.
             </p>
           </div>
           <div className="w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary flex items-center justify-center">
@@ -108,7 +110,7 @@ export default function DoctorsList() {
                 onClick={() => setOpenMenu(true)}
               >
                 <span className="lg:text-base text-[12px] font-medium text-white lg:leading-[23px] leading-[17px]">
-                  View Profile
+                  {t("viewProfile")}
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

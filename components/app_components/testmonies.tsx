@@ -2,17 +2,19 @@ import Image from "next/image";
 import testimonial1 from "@/assets/landing/testm1.png";
 import testimonial2 from "@/assets/landing/testm2.png";
 import testimonial3 from "@/assets/landing/testm3.png";
+import { useTranslations } from "next-intl";
 
 export default function Testmonies() {
+  const t = useTranslations("testimonials");
   return (
     <section className="mb-6 lg:mb-16">
       <div className="flex flex-col items-center gap-2 mb-3 lg:mb-10">
         <h1 className="text-tertiary text-[12px] lg:text-[20px] lg:leading-[29px] rounded-full border border-tertiary px-2 py-0.5 lg:mb-2 inline-block ">
-          Testimonials
+          {t("title")}
         </h1>
 
         <h2 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px]">
-          What Our Patients Say
+          {t("description")}
         </h2>
       </div>
 
@@ -35,9 +37,7 @@ export default function Testmonies() {
               “
             </span>
             <p className="text-[14px] lg:text-[20px] font-normal text-white leading-5 lg:leading-[29px] text-center">
-              From the first consultation, the team was professional and
-              reassuring. The dentist explained everything clearly and made me
-              feel comfortable throughout the treatment.
+              {t("review1")}
             </p>
           </div>
         </div>
@@ -76,9 +76,7 @@ export default function Testmonies() {
               “
             </span>
             <p className="text-[14px] lg:text-[20px] font-normal text-white leading-5 lg:leading-[29px] text-center">
-              I was nervous before my visit, but the doctors and staff were very
-              patient and supportive. The treatment was smooth and handled with
-              great care.
+              {t("review2")}
             </p>
           </div>
         </div>
@@ -117,9 +115,7 @@ export default function Testmonies() {
               “
             </span>
             <p className="text-[14px] lg:text-[20px] font-normal text-white leading-5 lg:leading-[29px] text-center">
-              The clinic is clean, well-organized, and the doctors are highly
-              experienced. I’m satisfied with the care I received and would
-              recommend them to others.
+              {t("review3")}
             </p>
           </div>
         </div>
