@@ -1,0 +1,51 @@
+import Image from "next/image";
+import heroImage from "@/assets/aboutus/hero.png";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+function LandingSection() {
+  const t = useTranslations();
+  return (
+    <div>
+      <div className="flex flex-col lg:flex-row lg:items-end gap-2 justify-between mb-4 lg:mb-7">
+        <h1 className="text-[20px] lg:text-[48px] font-bold leading-[29px] lg:leading-[69px] text-secondary ">
+          Caring for Smiles with Trust <br className="hidden lg:block" />
+          and Expertise
+        </h1>
+
+        <p className="text-[12px] lg:text-[20px] font-normal leading-[17px] lg:leading-[29px] text-secondary md:max-w-[381px]">
+          Meet our dedicated dental team, focused on delivering safe and
+          comfortable care using modern techniques and best practices.
+        </p>
+      </div>
+      <section className="w-full h-[211px] lg:h-[398px] relative overflow-hidden rounded-3xl mb-7 lg:mb-16">
+        <Image
+          src={heroImage.src}
+          alt=""
+          fill
+          className="object-cover absolute top-0 left-0 rounded-3xl"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+          <h1 className="text-white text-[20px] lg:text-[48px] font-bold leading-[29px] lg:leading-[69px]">
+            {/* {t("ourDoctors")} */}
+            About Us
+          </h1>
+          <p className="text-white text-[12px] lg:text-[20px] lg:leading-[29px] font-semibold flex gap-2 justify-center">
+            <Link href="/" className="">
+              {/* {t("home")} */}
+              Home
+            </Link>
+            /
+            <Link href="/about" className="">
+              {/* {t("doctors")} */}
+              About Us
+            </Link>
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default LandingSection;
