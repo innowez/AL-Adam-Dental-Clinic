@@ -117,7 +117,7 @@ export default function DoctorsList() {
           </div>
           <div
             className={cn(
-              "w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px]  flex items-center justify-center relative",
+              "w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px]  flex items-center justify-center relative bg-white",
               isInput ? "" : "border border-primary",
             )}
           >
@@ -128,7 +128,7 @@ export default function DoctorsList() {
               value={searchKey}
               onChange={(e) => setSearchKey(e.target.value)}
               className={cn(
-                "w-2xs h-9 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary absolute right-0 p-2.5",
+                "w-2xs h-9 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary absolute right-0 p-2.5 bg-white",
                 isInput ? "" : "hidden",
               )}
             />
