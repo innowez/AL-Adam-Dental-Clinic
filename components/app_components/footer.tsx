@@ -105,12 +105,12 @@ function Footer() {
 
       <div className="mb-5 lg:hidden">
         <h3 className="text-[16px] font-medium text-white leading-6 mb-3">
-          Subscribe Our Newsletter
+          {t("subscribenewsletter")}
         </h3>
         <div className="flex gap-2">
           <input
             type="text"
-            placeholder="Enter your email"
+            placeholder={t("entere")}
             className="bg-white rounded-full px-4 py-2 w-full"
           />
           <button className="bg-primary text-white rounded-full px-4 py-2 ">

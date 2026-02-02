@@ -181,7 +181,7 @@ function Header() {
                     </button>
                     <div className="flex gap-2">
                       <h1 className="text-[20px] font-medium text-secondary">
-                        Menu
+                        {t("menu")}
                       </h1>
                     </div>
                   </div>
@@ -195,7 +195,7 @@ function Header() {
                         className="text-[20px] text-secondary"
                         onClick={() => setOpenMenu(false)}
                       >
-                        Home
+                        {t("home")}
                       </Link>
                     </li>
                     <li>
@@ -204,7 +204,7 @@ function Header() {
                         className="text-[20px] text-secondary"
                         onClick={() => setOpenMenu(false)}
                       >
-                        Services
+                        {t("services")}
                       </Link>
                     </li>
                     <li>
@@ -213,7 +213,7 @@ function Header() {
                         className="text-[20px] text-secondary"
                         onClick={() => setOpenMenu(false)}
                       >
-                        Doctors
+                        {t("doctors")}
                       </Link>
                     </li>
                     <li>
@@ -222,7 +222,7 @@ function Header() {
                         className="text-[20px] text-secondary"
                         onClick={() => setOpenMenu(false)}
                       >
-                        About Us
+                        {t("about")}
                       </Link>
                     </li>
                     <li>
@@ -231,11 +231,37 @@ function Header() {
                         className="text-[20px] text-secondary"
                         onClick={() => setOpenMenu(false)}
                       >
-                        Blog
+                        {t("blog")}
                       </Link>
                     </li>
                   </ul>
                 </nav>
+
+                <div className="absolute bottom-0 left-0 p-4 w-full">
+                  <div className="w-full border-t-2 border-gray-200 mb-4"></div>
+                  <button
+                    className="flex items-center gap-2 mr-0 lg:mr-4 cursor-pointer "
+                    onClick={onLanguageChange}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="20"
+                      fill="none"
+                      viewBox="0 0 23 20"
+                    >
+                      <path
+                        fill={isHomePage ? "#fff" : "#2c2e83"}
+                        d="m10.9 20 4.55-12h2.1l4.55 12H20l-1.075-3.05h-4.85L13 20zM3 17l-1.4-1.4 5.05-5.05a11.6 11.6 0 0 1-1.588-2Q4.349 7.425 3.75 6h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T11.1 4H0V2h7V0h2v2h7v2h-2.9q-.525 1.8-1.575 3.7T9.45 10.6l2.4 2.45-.75 2.05-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z"
+                      ></path>
+                    </svg>
+                    <span
+                      className={`${isHomePage ? "text-white" : "text-tertiary"} font-medium text-[20px]`}
+                    >
+                      {nextLocale === "ar" ? "العربية" : "English"}
+                    </span>
+                  </button>
+                </div>
               </div>
             </motion.div>
           </>

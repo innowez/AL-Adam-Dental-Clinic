@@ -180,8 +180,49 @@
     "dr4Specialty": "Pediatric Dentistry"
   },
 
+  "aboutPage": {
+    "title1": "Caring for Smiles with Trust",
+    "title2": "and Expertise",
+    "description": "Meet our dedicated dental team, focused on delivering safe and comfortable care using modern techniques and best practices",
+    "aboutUs": "About Us",
+    "home": "Home",
+
+    "whoWeAre": "Who We Are",
+    "wwadis1": "Al Adam Specialty Dental Clinic is a modern dental care center focused on",
+    "wwadis2": "delivering safe, reliable, and patient-centered treatments using advanced",
+    "wwadis3": "technology and experienced specialists.",
+    "missionVision": "Our Mission & Vision",
+    "contactUs": "Contact Us",
+    "vision": "Our Vision",
+    "visionTitle": "Building Trust Through Quality Dental Care",
+    "visionDescription": "Our vision is to become a trusted dental care provider recognized for clinical excellence, modern technology, and compassionate patient experiences. We aim to create a positive impact on oral health by delivering consistent, ethical, and high-quality dental services for individuals and families.",
+    "mission": "Our Mission",
+    "missionTitle": "Committed to Patient-Centered Dentistry",
+    "missionDescription": "Our mission is to provide comprehensive dental care that prioritizes patient comfort, safety, and long-term oral health. Through skilled professionals, advanced equipment, and transparent communication, we strive to ensure every patient receives personalized treatment in a calm and supportive environment.",
+
+    "ourValue": "Our Values",
+    "ourValueDesc1": "Principles That Shape",
+    "ourValueDesc2": "Our Care",
+    "patientFirst": "Patient First",
+    "clinicalExcellence": "Clinical Excellence",
+    "transparency": "Transparency",
+    "comfortCare": "Comfort & Care",
+    "ourValuecontactDis": "Our values define how we treat our patients, how we work as a team, and how we deliver dental care every day. They guide our commitment to quality, trust, and long-term patient relationships.",
+
+    "ourFacilities": "Our Facilities",
+    "ourFacilitiesDesc1": "Designed for Comfort, Safety,",
+    "ourFacilitiesDesc2": "and Modern Care",
+    "treatmentrooms": "Treatment rooms",
+    "receptionandwaitingarea": "Reception and waiting area",
+    "sterilizationarea": "Sterilization area",
+    "advanceddentalequipment": "Advanced dental equipment"
+  },
+
   "headerFooter": {
+    "menu": "Menu",
     "subscribe": "Subscribe",
+    "subscribenewsletter": "Subscribe Our Newsletter",
+    "entere": "Enter your email",
     "contactUs": "Contact Us",
     "quickLinks": "Quick Links",
     "home": "Home",

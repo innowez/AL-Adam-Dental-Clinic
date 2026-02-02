@@ -13,8 +13,10 @@ import faclity9 from "@/assets/aboutus/faclity9.png";
 import faclity10 from "@/assets/aboutus/faclity10.png";
 import faclity11 from "@/assets/aboutus/faclity11.png";
 import faclity12 from "@/assets/aboutus/faclity12.png";
+import { useTranslations } from "next-intl";
 
 export default function OurFacilities() {
+  const t = useTranslations("aboutPage");
   const [isCheck, setIsCheck] = useState(false);
 
   return (
@@ -24,12 +26,12 @@ export default function OurFacilities() {
           <div>
             <div className="mb-4 lg:mb-6 text-center lg:text-left ">
               <span className="text-tertiary text-[12px] lg:text-xl rounded-full border border-tertiary px-4 py-0.5 ">
-                Our Facilities
+                {t("ourFacilities")}
               </span>
             </div>
             <h1 className="text-base lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] text-secondary text-center lg:text-left">
-              Designed for Comfort, Safety, <br />
-              and Modern Care
+              {t("ourFacilitiesDesc1")} <br />
+              {t("ourFacilitiesDesc2")}
             </h1>
           </div>
 
@@ -50,7 +52,7 @@ export default function OurFacilities() {
                     ></path>
                   </svg>
                 </span>
-                <span>Treatment rooms</span>
+                <span>{t("treatmentrooms")}</span>
               </li>
               <li
                 className={`cursor-pointer ${isCheck ? "text-[32px] font-bold flex items-center gap-3" : ""}`}
@@ -72,10 +74,10 @@ export default function OurFacilities() {
                     </svg>
                   </span>
                 )}
-                Reception and waiting area
+                {t("receptionandwaitingarea")}
               </li>
-              <li className="">Sterilization area</li>
-              <li className="">Advanced dental equipment</li>
+              <li className="">{t("sterilizationarea")}</li>
+              <li className="">{t("advanceddentalequipment")}</li>
             </ul>
           </div>
         </div>
@@ -192,7 +194,7 @@ export default function OurFacilities() {
                   ></path>
                 </svg>
               </span>
-              <span>Treatment rooms</span>
+              <span>{t("treatmentrooms")}</span>
             </li>
             <li
               className={`cursor-pointer ${isCheck ? "text-[14px] font-bold flex items-center gap-3" : ""}`}
@@ -214,10 +216,10 @@ export default function OurFacilities() {
                   </svg>
                 </span>
               )}
-              Reception and waiting area
+              {t("receptionandwaitingarea")}
             </li>
-            <li className="">Sterilization area</li>
-            <li className="">Advanced dental equipment</li>
+            <li className="">{t("sterilizationarea")}</li>
+            <li className="">{t("advanceddentalequipment")}</li>
           </ul>
         </div>
       </div>

@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import ourValueImg from "@/assets/aboutus/ourvalue.png";
+import { useTranslations } from "next-intl";
 
 export default function OurValue() {
+  const t = useTranslations("aboutPage");
   const handleScroll = () => {
     window.scrollTo({
       top: document.getElementById("contact")?.offsetTop || 0,
@@ -23,20 +25,20 @@ export default function OurValue() {
           <div className="flex flex-col gap-6 lg:justify-between h-full  ">
             <div className="">
               <span className="text-[12px] lg:text-[20px] leading-[29px] text-white rounded-full border border-white px-2  lg:px-4 lg:py-0.5 inline-block mb-6">
-                Our Values
+                {t("ourValue")}
               </span>
               <h2 className="text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-white">
-                Principles That Shape <br />
-                Our Care
+                {t("ourValueDesc1")} <br />
+                {t("ourValueDesc2")}
               </h2>
             </div>
 
             <div className="ml-4 lg:ml-20">
               <ul className="text-[16px] lg:text-[20px] lg:leading-[29px] text-white list-disc ">
-                <li>Patient First</li>
-                <li>Clinical Excellence</li>
-                <li>Transparency</li>
-                <li>Comfort & Care</li>
+                <li>{t("patientFirst")}</li>
+                <li>{t("clinicalExcellence")}</li>
+                <li>{t("transparency")}</li>
+                <li>{t("comfortCare")}</li>
               </ul>
             </div>
           </div>
@@ -49,14 +51,12 @@ export default function OurValue() {
                 className="text-xs lg:text-base bg-white text-black rounded-full px-4 py-2"
                 onClick={() => handleScroll()}
               >
-                Contact us
+                {t("contactUs")}
               </button>
             </div>
 
             <p className="text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px] text-center lg:text-left text-white max-w-[433px]">
-              Our values define how we treat our patients, how we work as a
-              team, and how we deliver dental care every day. They guide our
-              commitment to quality, trust, and long-term patient relationships.
+              {t("ourValuecontactDis")}
             </p>
           </div>
         </div>

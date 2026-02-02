@@ -1,24 +1,23 @@
-import React from "react";
 import Image from "next/image";
 import whoWeAre1 from "@/assets/aboutus/wwa1.png";
 import whoWeAre2 from "@/assets/aboutus/wwa2.png";
 import whoWeAre3 from "@/assets/aboutus/wwa3.png";
 import whoWeAre4 from "@/assets/aboutus/wwa4.png";
 import whoWeAre5 from "@/assets/aboutus/wwa5.png";
+import { useTranslations } from "next-intl";
 
 function WhoWeAre() {
+  const t = useTranslations("aboutPage");
   return (
     <section className="">
       <div className="mb-7 lg:mb-10">
         <h1 className="text-base sm:text-[32px] font-semibold text-center lg:text-[64px] leading-[27px] sm:leading-[46px] lg:leading-[69px] text-secondary mb-2">
-          Who We Are
+          {t("whoWeAre")}
         </h1>
         <p className="text-[12px] sm:text-[20px] font-normal text-center lg:text-[20px] leading-[17px] sm:leading-[29px] lg:leading-[29px] text-secondary/60">
-          Al Adam Specialty Dental Clinic is a modern dental care center focused
-          on <br className="hidden lg:block" /> delivering safe, reliable, and
-          patient-centered treatments using advanced{" "}
+          {t("wwadis1")} <br className="hidden lg:block" /> {t("wwadis2")}
           <br className="hidden lg:block" />
-          technology and experienced specialists.
+          {t("wwadis3")}
         </p>
       </div>
 
