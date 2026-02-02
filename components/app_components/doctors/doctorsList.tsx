@@ -8,18 +8,10 @@ import dotr5 from "@/assets/doctors/dotr5.png";
 import dotr6 from "@/assets/doctors/dotr6.png";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { X } from "lucide-react";
 
 export default function DoctorsList() {
   const t = useTranslations("doctorPage");
@@ -29,50 +21,82 @@ export default function DoctorsList() {
       name: t("dr1Name"),
       specialization: t("dr1Specialty"),
       istxtBlack: "lg:text-black lg:fill-black",
+      searchKey: "Dr. Ahmed Al-Harthy د. أحمد الحارثي",
     },
     {
       image: dotr2,
       name: t("dr2Name"),
       specialization: t("dr2Specialty"),
       istxtBlack: "",
+      searchKey: "Dr. Amina Al-Harthy د. أمينة الحارثي (MBBS)",
     },
     {
       image: dotr3,
       name: t("dr3Name"),
       specialization: t("dr3Specialty"),
       istxtBlack: "",
+      searchKey: "Dr. Fatima Al-Balushi د. فاطمة البلوشي (MBBS)",
     },
     {
       image: dotr4,
       name: t("dr4Name"),
       specialization: t("dr4Specialty"),
       istxtBlack: "lg:text-black lg:fill-black",
+      searchKey: "Dr. Mohammed (MBBS) د. محمد",
     },
     {
       image: dotr5,
       name: t("dr1Name"),
       specialization: t("dr1Specialty"),
       istxtBlack: "lg:text-black lg:fill-black",
+      searchKey: "Dr. Ahmed Al-Harthy د. أحمد الحارثي",
     },
     {
       image: dotr6,
       name: t("dr2Name"),
       specialization: t("dr2Specialty"),
       istxtBlack: "",
+      searchKey: "Dr. Amina Al-Harthy د. أمينة الحارثي (MBBS)",
     },
   ];
 
+  const [isInput, setIsInput] = useState(false);
+  const [searchKey, setSearchKey] = useState<string>("");
   const [openMenu, setOpenMenu] = useState(false);
+  const [filteredList, setFilteredList] =
+    useState<typeof doctorsList>(doctorsList);
   const [selDocter, setSelDocter] = useState({
     image: dotr1,
     name: t("dr1Name"),
     specialization: t("dr1Specialty"),
   });
 
+  const openInput = () => {
+    setIsInput(true);
+  };
+
+  const closeInput = () => {
+    setIsInput(false);
+    setSearchKey("");
+  };
+
+  useEffect(() => {
+    if (isInput) {
+      document.getElementById("search")?.focus();
+    }
+  }, [isInput]);
+
   const handleViewProfile = (doctor: any) => {
     setSelDocter(doctor);
     setOpenMenu(true);
   };
+
+  useEffect(() => {
+    const filteredList = doctorsList.filter((item) =>
+      item.searchKey.toLowerCase().includes(searchKey.toLowerCase()),
+    );
+    setFilteredList(filteredList);
+  }, [searchKey]);
 
   return (
     <section className="relative">
@@ -91,27 +115,51 @@ export default function DoctorsList() {
               {t("bestPractices")}.
             </p>
           </div>
-          <div className="w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="none"
-              viewBox="0 0 20 20"
-              className="lg:w-8 lg:h-8"
-            >
-              <path
-                stroke="#24B6B6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m17.5 17.5-3.617-3.617M9.167 15.833a6.667 6.667 0 1 0 0-13.333 6.667 6.667 0 0 0 0 13.333"
-              ></path>
-            </svg>
+          <div
+            className={cn(
+              "w-9 h-9 lg:w-12 lg:h-12 rounded-[8px] lg:rounded-[12px]  flex items-center justify-center relative",
+              isInput ? "" : "border border-primary",
+            )}
+          >
+            <input
+              type="text"
+              id="search"
+              name="search"
+              value={searchKey}
+              onChange={(e) => setSearchKey(e.target.value)}
+              className={cn(
+                "w-2xs h-9 lg:h-12 rounded-[8px] lg:rounded-[12px] border border-primary absolute right-0 p-2.5",
+                isInput ? "" : "hidden",
+              )}
+            />
+            {isInput ? (
+              <X
+                className="lg:w-6 lg:h-6 cursor-pointer z-20 text-primary "
+                onClick={closeInput}
+              />
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+                className="lg:w-8 lg:h-8 cursor-pointer z-20 "
+                onClick={openInput}
+              >
+                <path
+                  stroke="#24B6B6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m17.5 17.5-3.617-3.617M9.167 15.833a6.667 6.667 0 1 0 0-13.333 6.667 6.667 0 0 0 0 13.333"
+                ></path>
+              </svg>
+            )}
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-          {doctorsList.map((doctor, index) => (
+          {filteredList.map((doctor, index) => (
             <div
               key={index}
               className="h-[433px] lg:h-[520px] rounded-[24px] p-4 bg-[#EEFAFA] relative overflow-hidden"

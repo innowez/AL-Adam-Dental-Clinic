@@ -1,5 +1,6 @@
-"use client";
+// "use client";
 
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 function Service() {
@@ -159,9 +160,12 @@ function Service() {
             {t("description")} <br className="lg:hidden" /> {t("description2")}
           </h4>
         </div>
-        <button className="px-4 py-1 h-9 text-[12px] lg:text-xl rounded-full bg-primary text-white">
+        <Link
+          href="/services"
+          className="px-4 py-1 h-9 text-[12px] lg:text-xl rounded-full bg-primary text-white"
+        >
           {t("viewAll")}
-        </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">

@@ -33,6 +33,10 @@ function Header() {
     router.replace(pathname, { locale: nextLocale });
   };
 
+  const linkToWhatsapp = () => {
+    window.open("https://wa.me/971557777777", "_blank");
+  };
+
   return (
     <header className="fixed xl:absolute top-0 left-0 right-0 z-50 shadow-lg bg-white xl:bg-transparent xl:shadow-none">
       <div className="flex justify-between items-center px-4 py-3 lg:py-7 lg:pl-12 lg:pr-14">
@@ -125,7 +129,10 @@ function Header() {
               {nextLocale === "ar" ? "العربية" : "English"}
             </span>
           </button>
-          <button className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-[#01DF3C]">
+          <button
+            className="w-9 h-9 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-[#01DF3C] cursor-pointer"
+            onClick={linkToWhatsapp}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
