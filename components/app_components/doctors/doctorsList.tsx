@@ -65,10 +65,12 @@ export default function DoctorsList() {
   const [openMenu, setOpenMenu] = useState(false);
   const [filteredList, setFilteredList] =
     useState<typeof doctorsList>(doctorsList);
-  const [selDocter, setSelDocter] = useState({
+  const [selDocter, setSelDocter] = useState<(typeof doctorsList)[0]>({
     image: dotr1,
     name: t("dr1Name"),
     specialization: t("dr1Specialty"),
+    istxtBlack: "lg:text-black lg:fill-black",
+    searchKey: "Dr. Ahmed Al-Harthy د. أحمد الحارثي",
   });
 
   const openInput = () => {
@@ -186,7 +188,7 @@ export default function DoctorsList() {
                   "lg:border lg:border-primary lg:bg-[#24B6B61F] lg:backdrop-blur-sm lg:hover:bg-[#24B6B6] lg:hover:text-white lg:transition-all lg:duration-500 lg:ease-in-out cursor-pointer",
                   doctor.istxtBlack,
                 )}
-                onClick={() => setOpenMenu(true)}
+                onClick={() => handleViewProfile(doctor)}
               >
                 <span className="lg:text-base text-[12px] font-medium lg:leading-[23px] leading-[17px]">
                   {t("viewProfile")}
@@ -216,9 +218,9 @@ export default function DoctorsList() {
         {openMenu && (
           <>
             <motion.div
-              initial={{ opacity: 0, y: "100%" }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: "100%" }}
+              // initial={{ opacity: 0, y: "100%" }}
+              // animate={{ opacity: 1, y: 0 }}
+              // exit={{ opacity: 0, y: "100%" }}
               transition={{
                 type: "spring",
                 stiffness: 300,
@@ -230,14 +232,14 @@ export default function DoctorsList() {
                 "lg:hidden",
               )}
             >
-              <div className="bg-white rounded-t-[24px] px-4 py-6 overflow-y-auto max-h-[80vh] no-scrollbar">
+              <div className="bg-white rounded-t-[24px] px-4 py-6 overflow-y-auto max-h-[80vh]  no-scrollbar">
                 {/* Doctor Image and Info Section */}
                 <div className="flex gap-4 mb-4">
                   {/* Doctor Image */}
                   <div className="w-[202px] h-[270px] bg-[#24B6B6] rounded-[12px] shrink-0 relative overflow-hidden">
                     <Image
-                      src={doctorsList[0].image}
-                      alt={doctorsList[0].name}
+                      src={selDocter.image}
+                      alt={"naem"}
                       fill
                       className="object-cover"
                     />
@@ -280,10 +282,10 @@ export default function DoctorsList() {
                 {/* Doctor Name and Specialization */}
                 <div className="mb-3">
                   <h2 className="text-xl font-semibold text-secondary mb-2">
-                    {doctorsList[0].name}
+                    {selDocter.name}
                   </h2>
                   <p className="text-base font-normal text-secondary bg-[#EEFAFA] px-2 py-1 rounded-[8px]">
-                    {doctorsList[0].specialization}
+                    {selDocter.specialization}
                   </p>
                 </div>
 
@@ -348,30 +350,147 @@ export default function DoctorsList() {
         )}
       </AnimatePresence>
 
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-amber-600">
-        <button onClick={() => setOpenMenu(true)}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="none"
-            viewBox="0 0 32 32"
-          >
-            <rect
-              width="31"
-              height="31"
-              x="0.5"
-              y="0.5"
-              stroke="#24B6B6"
-              rx="15.5"
-            ></rect>
-            <path
-              fill="#24B6B6"
-              d="m16 17.4-4.9 4.9a.95.95 0 0 1-.7.275.95.95 0 0 1-.7-.275.95.95 0 0 1-.275-.7q0-.425.275-.7l4.9-4.9-4.9-4.9a.95.95 0 0 1-.275-.7q0-.425.275-.7a.95.95 0 0 1 .7-.275q.424 0 .7.275l4.9 4.9 4.9-4.9a.95.95 0 0 1 .7-.275q.424 0 .7.275a.95.95 0 0 1 .275.7.95.95 0 0 1-.275.7L17.4 16l4.9 4.9a.95.95 0 0 1 .275.7.95.95 0 0 1-.275.7.95.95 0 0 1-.7.275.95.95 0 0 1-.7-.275z"
-            ></path>
-          </svg>
-        </button>
-      </div> */}
+      <AnimatePresence>
+        {openMenu && (
+          <div className="hidden lg:block w-full h-full fixed top-0 left-0 right-0 bottom-0 z-50">
+            <div className="w-full h-full bg-black/50 absolute top-0 left-0 right-0 bottom-0 z-50"></div>
+            <motion.div
+              // initial={{ opacity: 0, y: "100%" }}
+              // animate={{ opacity: 1, y: 0 }}
+              // exit={{ opacity: 0, y: "100%" }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              // className="sticky bottom-0 left-0 z-50 w-full h-full"
+              className={cn(
+                "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[50%] z-50 w-[60%]",
+              )}
+            >
+              <div className="bg-white rounded-[24px] px-4 py-6 overflow-y-auto no-scrollbar">
+                {/* Doctor Image and Info Section */}
+                <div className="flex justify-between gap-4">
+                  {/* Doctor Image */}
+                  <div className="min-w-[202px] w-[45%] min-h-[495px] h-full bg-[#24B6B6] rounded-[12px] shrink-0 relative overflow-hidden">
+                    <Image
+                      src={selDocter.image}
+                      alt={"name"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Doctor Quote */}
+                  <div className="flex flex-col gap-4 ">
+                    <div>
+                      <div className="flex justify-between items-center mb-1">
+                        <h3 className="text-xl font-semibold text-secondary">
+                          {selDocter.name}
+                        </h3>
+                        <button
+                          onClick={() => setOpenMenu(false)}
+                          className="cursor-pointer hover:scale-110 transition-all duration-300"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            fill="none"
+                            viewBox="0 0 32 32"
+                          >
+                            <rect
+                              width="31"
+                              height="31"
+                              x="0.5"
+                              y="0.5"
+                              stroke="#24B6B6"
+                              rx="15.5"
+                            />
+                            <path
+                              stroke="#24B6B6"
+                              strokeLinecap="round"
+                              strokeWidth="2"
+                              d="m10.5 10.5 11 11m-11 0 11-11"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <p className="text-base font-normal text-secondary bg-[#EEFAFA] px-2 py-1 rounded-[8px] inline-block">
+                        {selDocter.specialization}
+                      </p>
+                    </div>
+
+                    <p className="text-lg font-normal text-secondary italic">
+                      “I focus on preventive and cosmetic dental care, helping
+                      patients achieve healthy smiles through comfortable and
+                      personalized treatments.”
+                    </p>
+
+                    <div>
+                      <div className="mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="text-base font-normal text-secondary w-[80px]">
+                            Language
+                          </span>
+                          <span className="text-base font-bold text-secondary">
+                            : Arabic & English
+                          </span>
+                        </div>
+                      </div>
+                      {/* Experience Section */}
+                      <div className="mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="text-base font-normal text-secondary w-[80px]">
+                            Experience
+                          </span>
+                          <span className="text-base font-bold text-secondary">
+                            : 9+ years
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Specialist Section */}
+                      <div className="mb-3">
+                        <div className="flex gap-2">
+                          <span className="text-base font-normal text-secondary whitespace-nowrap w-[80px]">
+                            Specialist in
+                          </span>
+                          <span className="text-base font-bold text-secondary ">
+                            : braces, clear aligners, and bite correction for
+                            all ages
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Available Hours Section */}
+                    <div className="bg-[#EEFAFA] rounded-[12px] p-4">
+                      <h3 className="text-lg font-semibold text-secondary mb-3">
+                        Available Hours
+                      </h3>
+                      <div className="space-y-2">
+                        <p className="text-base font-normal text-secondary">
+                          Sun to Thu: 10:00 AM – 6:00 PM
+                        </p>
+                        <p className="text-base font-normal text-secondary">
+                          Sat: 10:00 AM – 2:00 PM
+                        </p>
+                        <div className="bg-[#FFE5E5] rounded-[8px] px-3 py-2 mt-3">
+                          <p className="text-sm font-normal text-secondary text-center">
+                            Not available on Friday
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
