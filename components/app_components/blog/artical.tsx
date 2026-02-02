@@ -1,47 +1,12 @@
 import Image from "next/image";
-import blogimg1 from "@/assets/blogs/blog1.png";
-import blogimg2 from "@/assets/blogs/blog2.png";
-import blogimg3 from "@/assets/blogs/blog3.png";
+// import blogimg1 from "@/assets/blogs/blog1.png";
+// import blogimg2 from "@/assets/blogs/blog2.png";
+// import blogimg3 from "@/assets/blogs/blog3.png";
+import blogList from "@/lib/blog.json";
+import { Link } from "@/i18n/navigation";
 
 export default function Artical() {
-  const articleList = [
-    {
-      image: blogimg1,
-      title: "Daily Oral Care Habits for a Healthy Smile",
-      description:
-        "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems.",
-    },
-    {
-      image: blogimg2,
-      title: "When Should You Visit a Dentist?",
-      description:
-        "Early signs and symptoms that indicate it’s time to schedule a dental check-up.",
-    },
-    {
-      image: blogimg3,
-      title: "Children’s Dental Care: What Parents Should Know",
-      description:
-        "A guide to maintaining healthy teeth for children, from early habits to regular dental visits.",
-    },
-    {
-      image: blogimg3,
-      title: "Children’s Dental Care: What Parents Should Know",
-      description:
-        "A guide to maintaining healthy teeth for children, from early habits to regular dental visits.",
-    },
-    {
-      image: blogimg1,
-      title: "Daily Oral Care Habits for a Healthy Smile",
-      description:
-        "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems.",
-    },
-    {
-      image: blogimg2,
-      title: "When Should You Visit a Dentist?",
-      description:
-        "Early signs and symptoms that indicate it’s time to schedule a dental check-up.",
-    },
-  ];
+  const articleList = blogList.articleList;
   return (
     <section className="px-4 lg:px-12 mb-7 lg:mb-12">
       <h1 className="text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-secondary mb-6">
@@ -68,9 +33,11 @@ export default function Artical() {
                 </p>
               </div>
               <div>
-                <button className=" px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-                  Read More
-                </button>
+                <Link href={`/blog/${article.id}`}>
+                  <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
+                    Read More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
