@@ -24,7 +24,7 @@ export default function HeroSection() {
           prevent common oral issues, and make <br className="lg:hidden" />
           informed decisions about your smile.
         </p>
-        <div className="flex justify-center gap-2 overflow-x-scroll w-full no-scrollbar">
+        <div className="flex justify-left lg:justify-center gap-2 overflow-x-scroll w-full no-scrollbar px-4 lg:px-0">
           {topicList.map((topic, index) => (
             <button
               key={index}

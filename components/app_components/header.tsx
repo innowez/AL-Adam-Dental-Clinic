@@ -46,17 +46,21 @@ function Header() {
             <div className="h-1 w-full bg-primary rounded-3xl"></div>
           </button>
           <div className="logo">
-            <Image
-              src={mobileLogo.src}
-              alt="mobile-logo"
-              width={81.54}
-              height={28.82}
-            />
+            <Link href="/">
+              <Image
+                src={mobileLogo.src}
+                alt="mobile-logo"
+                width={81.54}
+                height={28.82}
+              />
+            </Link>
           </div>
         </div>
 
         <div className="hidden xl:flex items-center gap-16">
-          <Image src={logo.src} alt="logo" width={72} height={72} />
+          <Link href="/">
+            <Image src={logo.src} alt="logo" width={72} height={72} />
+          </Link>
           <nav>
             <ul className="flex gap-1">
               <li

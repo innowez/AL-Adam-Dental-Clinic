@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import ourValueImg from "@/assets/aboutus/ourvalue.png";
 
 export default function OurValue() {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: document.getElementById("contact")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <section className="mb-10 lg:mb-20">
       <div className="relative h-[414px] lg:h-[395px] xl:h-[495px]">
@@ -37,7 +45,10 @@ export default function OurValue() {
         <div className="absolute bottom-0 right-0 w-full lg:w-[60%] p-4 lg:p-10 ">
           <div className="flex flex-col lg:flex-row lg:items-end items-center justify-between gap-6 lg:gap-0 w-full ">
             <div>
-              <button className="text-xs lg:text-base bg-white text-black rounded-full px-4 py-2">
+              <button
+                className="text-xs lg:text-base bg-white text-black rounded-full px-4 py-2"
+                onClick={() => handleScroll()}
+              >
                 Contact us
               </button>
             </div>

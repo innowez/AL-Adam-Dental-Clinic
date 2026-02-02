@@ -174,6 +174,52 @@ export default function OurFacilities() {
             </div>
           </div>
         </div>
+
+        <div className="mt-6 lg:hidden block">
+          <ul className="flex flex-col gap-4 text-[12px] lg:text-xl xl:text-[24px] font-normal text-secondary leading-4 lg:leading-[22px] xl:leading-[35px]">
+            <li className="cursor-pointer text-[14px] font-bold flex items-center gap-3">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  viewBox="0 0 15 20"
+                >
+                  <path
+                    fill="#224998"
+                    d="M0 1v18a1.002 1.002 0 0 0 1.57.824l13-9c.538-.373.538-1.271 0-1.645l-13-9A.999.999 0 0 0 0 1"
+                  ></path>
+                </svg>
+              </span>
+              <span>Treatment rooms</span>
+            </li>
+            <li
+              className={`cursor-pointer ${isCheck ? "text-[14px] font-bold flex items-center gap-3" : ""}`}
+              onClick={() => setIsCheck(!isCheck)}
+            >
+              {isCheck && (
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    viewBox="0 0 15 20"
+                  >
+                    <path
+                      fill="#224998"
+                      d="M0 1v18a1.002 1.002 0 0 0 1.57.824l13-9c.538-.373.538-1.271 0-1.645l-13-9A.999.999 0 0 0 0 1"
+                    ></path>
+                  </svg>
+                </span>
+              )}
+              Reception and waiting area
+            </li>
+            <li className="">Sterilization area</li>
+            <li className="">Advanced dental equipment</li>
+          </ul>
+        </div>
       </div>
     </section>
   );

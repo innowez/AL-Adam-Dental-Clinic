@@ -11,6 +11,7 @@ import dece7 from "@/assets/service/dces7.png";
 import Testmonies from "../testmonies";
 import Contactus from "../contactus";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 export default function ServiceHero() {
   const t = useTranslations("servicePage");
@@ -79,6 +80,7 @@ export default function ServiceHero() {
       ],
     },
   ];
+
   return (
     <div className="mt-[76px] lg:mt-[126px] px-4 lg:px-12">
       <section className="w-full h-[211px] lg:h-[398px] relative overflow-hidden rounded-3xl mb-7 lg:mb-16">
@@ -157,7 +159,7 @@ export default function ServiceHero() {
               <p className="text-[12px] lg:text-[20px] lg:leading-[29px] font-normal text-secondary/75 leading-[17px] mb-2 lg:mb-6">
                 {item.description}
               </p>
-              <ul className="mb-3">
+              <ul className="mb-3 flex flex-col gap-2">
                 {item.list.map((listItem, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <svg

@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import grid1 from "@/assets/aboutus/ovm1.png";
 import grid2 from "@/assets/aboutus/ovm2.png";
 
 function OurMissionVision() {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: document.getElementById("contact")?.offsetTop || 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <section className="xl:px-36 xl:mb-20 mb-8">
       <div className="flex justify-center md:justify-between items-center gap-2 relative mb-3 md:mb-10">
@@ -11,7 +19,10 @@ function OurMissionVision() {
             Our Mission & Vision
           </span>
         </div>
-        <button className="hidden h-9 lg:h-auto text-[14px] md:flex items-center justify-center rounded-full bg-primary text-white lg:text-xl px-4 lg:px-5 lg:py-2">
+        <button
+          className="hidden h-9 lg:h-auto text-[14px] md:flex items-center justify-center rounded-full bg-primary text-white lg:text-xl px-4 lg:px-5 lg:py-2"
+          onClick={() => handleScroll()}
+        >
           Contact us
         </button>
       </div>
