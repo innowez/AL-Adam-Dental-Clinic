@@ -1,5 +1,6 @@
 import Image from "next/image";
 import titleImage from "@/assets/blogs/titleblog.png";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroSection() {
   const topicList = [
@@ -67,9 +68,11 @@ export default function HeroSection() {
               </div>
             </div>
             <div>
-              <button className=" px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-                Read More
-              </button>
+              <Link href="/blog/7">
+                <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
+                  Read More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

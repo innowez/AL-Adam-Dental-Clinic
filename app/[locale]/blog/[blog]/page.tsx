@@ -20,11 +20,10 @@ export default async function BlogDetail({
   return (
     <section className="mt-[76px] lg:mt-[126px]">
       <div className="px-4 lg:px-52 mb-7 lg:mb-12 ">
-        <h1 className="text-secondary text-xl lg:text-[48px] leading-[29px] lg:leading-[69px] font-semibold mb-3 lg:mb-6">
-          {/* Understanding Tooth Anatomy: <br />
-          Inside and Out */}
-          {article?.title}
-        </h1>
+        <h1
+          className="text-secondary text-xl lg:text-[48px] leading-[29px] lg:leading-[69px] font-semibold mb-3 lg:mb-6"
+          dangerouslySetInnerHTML={{ __html: article?.title || "title" }}
+        ></h1>
 
         <div className="flex justify-between w-full mb-6 text-[16px] lg:text-[20px] font-normal leading-[23px] lg:leading-[29px] text-secondary/75 ">
           <p>Read Time: 4 min</p>
