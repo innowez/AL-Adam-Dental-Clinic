@@ -3,6 +3,7 @@ import blogImage from "@/assets/blogs/blog1.png";
 import Contactus from "@/components/app_components/contactus";
 import blogList from "@/lib/blog.json";
 import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
 export default async function BlogDetail({
   params,
@@ -12,6 +13,7 @@ export default async function BlogDetail({
   const { blog } = await params;
 
   console.log(blog, "sdafas");
+  const t = await getTranslations("blogPage");
 
   const articleList = blogList.articleList;
 
@@ -22,12 +24,18 @@ export default async function BlogDetail({
       <div className="px-4 lg:px-52 mb-7 lg:mb-12 ">
         <h1
           className="text-secondary text-xl lg:text-[48px] leading-[29px] lg:leading-[69px] font-semibold mb-3 lg:mb-6"
-          dangerouslySetInnerHTML={{ __html: article?.title || "title" }}
+          dangerouslySetInnerHTML={{
+            __html: t(article?.title || "title"),
+          }}
         ></h1>
 
         <div className="flex justify-between w-full mb-6 text-[16px] lg:text-[20px] font-normal leading-[23px] lg:leading-[29px] text-secondary/75 ">
-          <p>Read Time: 4 min</p>
-          <p>Published: March 2026</p>
+          <p>
+            {t("readTime")}: 4 {t("min")}
+          </p>
+          <p>
+            {t("published")}: {t("march")}
+          </p>
         </div>
 
         <div className="relative h-[352px] lg:h-[446px] w-full mb-[16px] lg:mb-[55px] ">
@@ -42,103 +50,81 @@ export default async function BlogDetail({
         <div className="flex flex-col gap-5 lg:gap-12">
           <div>
             <h2 className="text-secondary text-[16px] lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] mb-3 lg:mb-6 ">
-              What Is Tooth Anatomy?
+              {t("whatIsToothAnatomy")}
             </h2>
             <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-              A tooth is a complex structure composed of multiple layers, each
-              serving a unique and vital function. While we typically only
-              observe the outer enamel surface, there are several crucial
-              structures that lie beneath it. These layers work together to
-              protect the tooth from decay and damage, while also providing the
-              necessary support for the chewing process. The inner layers, such
-              as dentin and pulp, play significant roles in maintaining the
-              health and functionality of the tooth, ensuring that we can
-              effectively bite and grind our food.
+              {t("blogdis1")}
             </p>
           </div>
 
           <div>
             <h2 className="text-secondary text-[16px] lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] mb-3 lg:mb-6 ">
-              Main Parts of a Tooth
+              {t("mainParts")}
             </h2>
             <div className="flex flex-col gap-2 lg:gap-4">
               <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
                 <span className="text-[14px] lg:text-2xl font-semibold">
-                  Enamel:
+                  {t("enamel")}:
                 </span>{" "}
-                Enamel is the hard outer layer of the tooth. It protects against
-                daily wear, bacteria, and temperature changes.
+                {t("enamilDis")}
               </p>
 
               <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-                <span className="text-[14px] text-2xl font-semibold">
-                  Dentin:
+                <span className="text-[14px] lg:text-2xl font-semibold">
+                  {t("dentin")}:
                 </span>{" "}
-                Dentin lies beneath the enamel and is less hard but more
-                sensitive. It supports the enamel and transmits sensations like
-                heat and cold.
+                {t("dentinDis")}
               </p>
 
               <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-                <span className="text-[14px] text-2xl font-semibold">
-                  Pulp:
+                <span className="text-[14px] lg:text-2xl font-semibold">
+                  {t("pulp")}:
                 </span>{" "}
-                The pulp is the soft inner tissue containing nerves and blood
-                vessels. It keeps the tooth alive and responsive.
+                {t("pulpdis")}
               </p>
             </div>
           </div>
 
           <div>
             <h2 className="text-secondary text-[16px] lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] mb-3 lg:mb-6 ">
-              Supporting Structures
+              {t("supportingStructures")}
             </h2>
             <div className="flex flex-col gap-2 lg:gap-4">
               <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-                <span className="text-[14px] text-2xl font-semibold">
-                  Gums (Gingiva):
+                <span className="text-[14px] lg:text-2xl font-semibold">
+                  {t("gums")}:
                 </span>{" "}
-                Gums protect the base of the teeth and help keep them securely
-                in place.Gums protect the base of the teeth and help keep them
-                securely in place.
+                {t("gumsDis")}
               </p>
 
               <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-                <span className="text-[14px] text-2xl font-semibold">
-                  Root & Jawbone:
+                <span className="text-[14px] lg:text-2xl font-semibold">
+                  {t("root")}:
                 </span>
-                The root anchors the tooth into the jawbone, providing stability
-                and strength for biting and chewing.
+                {t("rootDis")}
               </p>
             </div>
           </div>
 
           <div>
             <h2 className="text-secondary text-[16px] lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] mb-3 lg:mb-6 ">
-              Why Tooth Anatomy Matters
+              {t("anatomyMatters")}
             </h2>
             <p className="text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] ">
-              Understanding the structure of a tooth is crucial for grasping the
-              significance of maintaining good dental hygiene, scheduling
-              regular check-ups, and seeking early treatment when necessary.
-              Each layer of a tooth plays a vital role in its overall health,
-              and if damage occurs to one layer, it can have a cascading effect
-              on the entire tooth if not addressed promptly. This
-              interconnectedness highlights the importance of proactive dental
-              care to prevent more serious issues down the line.
+              {t("anatomyMattersDis")}
             </p>
           </div>
 
           <div>
             <h2 className="text-secondary text-[16px] lg:text-[32px] font-semibold leading-[23px] lg:leading-[46px] mb-3 lg:mb-6 ">
-              Preventive Care Tips
+              {t("preventiveCareTips")}
             </h2>
 
             <ul className="list-disc text-secondary text-[14px] leading-[20px] lg:text-[20px] lg:leading-[29px] font-semibold pl-6">
-              <li>Brush twice daily with fluoride toothpaste</li>
-              <li>Floss to remove plaque between teeth</li>
-              <li>Avoid excessive sugary foods</li>
-              <li>Visit your dentist regularly for check-ups</li>
+              <li>{t("toothpaste")}</li>
+              <li>{t("floss")}</li>
+              <li>{t("sugaryFoods")}</li>
+              <li>{t("dentistVisit")}</li>
             </ul>
           </div>
         </div>
@@ -148,7 +134,7 @@ export default async function BlogDetail({
         <section className="px-4 lg:px-12 mb-7 lg:mb-12">
           <hr className="w-full border-primary mb-6 lg:mb-12 " />
           <h1 className="text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-secondary mb-6">
-            You May Also Like
+            {t("youMayAlsoLike")}
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8 mb-6 lg:mb-12">
@@ -164,16 +150,16 @@ export default async function BlogDetail({
                 <div className="min-h-[125px] lg:min-h-[208px] flex flex-col justify-between">
                   <div>
                     <h2 className="text-[16px] lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary mb-2">
-                      {article.title}
+                      {t(article.title)}
                     </h2>
                     <p className="text-[12px] lg:text-[16px] font-normal leading-[17px] lg:leading-[23px] text-secondary/75 mb-2">
-                      {article.description}
+                      {t(article.description)}
                     </p>
                   </div>
                   <div>
                     <Link href={`/blog/${article.id}`}>
                       <button className=" px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-                        Read More
+                        {t("readMore")}
                       </button>
                     </Link>
                   </div>

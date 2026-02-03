@@ -4,13 +4,15 @@ import Image from "next/image";
 // import blogimg3 from "@/assets/blogs/blog3.png";
 import blogList from "@/lib/blog.json";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Artical() {
+  const t = useTranslations("blogPage");
   const articleList = blogList.articleList;
   return (
     <section className="px-4 lg:px-12 mb-7 lg:mb-12">
       <h1 className="text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-secondary mb-6">
-        Articles
+        {t("articles")}
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8">
@@ -26,16 +28,16 @@ export default function Artical() {
             <div className="min-h-[125px] lg:min-h-[208px] flex flex-col justify-between">
               <div>
                 <h2 className="text-[16px] lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary mb-2">
-                  {article.title}
+                  {t(article.title)}
                 </h2>
                 <p className="text-[12px] lg:text-[16px] font-normal leading-[17px] lg:leading-[23px] text-secondary/75 mb-2">
-                  {article.description}
+                  {t(article.description)}
                 </p>
               </div>
               <div>
                 <Link href={`/blog/${article.id}`}>
                   <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-                    Read More
+                    {t("readMore")}
                   </button>
                 </Link>
               </div>

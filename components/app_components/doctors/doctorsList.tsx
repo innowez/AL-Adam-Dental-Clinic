@@ -271,10 +271,8 @@ export default function DoctorsList() {
                         </svg>
                       </button>
                     </div>
-                    <p className="text-base font-normal leading-[23px] text-[#224998]">
-                      "I focus on preventive and cosmetic dental care, helping
-                      patients achieve healthy smiles through comfortable and
-                      personalized treatments."
+                    <p className="text-base font-normal leading-[23px] text-secondary">
+                      "{t("bigDesc")}"
                     </p>
                   </div>
                 </div>
@@ -293,10 +291,10 @@ export default function DoctorsList() {
                 <div className="mb-3">
                   <div className="flex items-center gap-2">
                     <span className="text-base font-normal text-secondary w-[80px]">
-                      Language
+                      {t("lang")}
                     </span>
                     <span className="text-base font-normal text-secondary">
-                      : Arabic & English
+                      : {t("aeiou")}
                     </span>
                   </div>
                 </div>
@@ -305,10 +303,10 @@ export default function DoctorsList() {
                 <div className="mb-3">
                   <div className="flex items-center gap-2">
                     <span className="text-base font-normal text-secondary w-[80px]">
-                      Experience
+                      {t("exp")}
                     </span>
                     <span className="text-base font-normal text-secondary">
-                      : 9+ years
+                      : {t("expVal")}
                     </span>
                   </div>
                 </div>
@@ -317,10 +315,10 @@ export default function DoctorsList() {
                 <div className="mb-3">
                   <div className="flex gap-2">
                     <span className="text-base font-normal text-secondary whitespace-nowrap w-[80px]">
-                      Specialist in
+                      {t("specialistIn")}
                     </span>
                     <span className="text-base font-normal text-secondary ">
-                      : braces, clear aligners, and bite correction for all ages
+                      : {t("specialistInVal")}
                     </span>
                   </div>
                 </div>
@@ -328,18 +326,18 @@ export default function DoctorsList() {
                 {/* Available Hours Section */}
                 <div className="bg-[#EEFAFA] rounded-[12px] p-4">
                   <h3 className="text-lg font-semibold text-secondary mb-3">
-                    Available Hours
+                    {t("avilablehr")}
                   </h3>
                   <div className="space-y-2">
                     <p className="text-base font-normal text-secondary">
-                      Sun to Thu: 10:00 AM – 6:00 PM
+                      {t("SunToThu")}
                     </p>
                     <p className="text-base font-normal text-secondary">
-                      Sat: 10:00 AM – 2:00 PM
+                      {t("sat")}: 10:00 AM – 2:00 PM
                     </p>
                     <div className="bg-[#FFE5E5] rounded-[8px] px-3 py-2 mt-3">
                       <p className="text-sm font-normal text-secondary text-center">
-                        Not available on Friday
+                        {t("NotAvailableOnFriday")}
                       </p>
                     </div>
                   </div>
@@ -423,19 +421,17 @@ export default function DoctorsList() {
                     </div>
 
                     <p className="text-lg font-normal text-secondary italic">
-                      “I focus on preventive and cosmetic dental care, helping
-                      patients achieve healthy smiles through comfortable and
-                      personalized treatments.”
+                      “{t("bigDesc")}”
                     </p>
 
                     <div>
                       <div className="mb-3">
                         <div className="flex items-center gap-2">
                           <span className="text-base font-normal text-secondary w-[80px]">
-                            Language
+                            {t("lang")}
                           </span>
                           <span className="text-base font-bold text-secondary">
-                            : Arabic & English
+                            : {t("aeiou")}
                           </span>
                         </div>
                       </div>
@@ -443,10 +439,10 @@ export default function DoctorsList() {
                       <div className="mb-3">
                         <div className="flex items-center gap-2">
                           <span className="text-base font-normal text-secondary w-[80px]">
-                            Experience
+                            {t("exp")}
                           </span>
                           <span className="text-base font-bold text-secondary">
-                            : 9+ years
+                            : {t("expVal")}
                           </span>
                         </div>
                       </div>
@@ -455,11 +451,10 @@ export default function DoctorsList() {
                       <div className="mb-3">
                         <div className="flex gap-2">
                           <span className="text-base font-normal text-secondary whitespace-nowrap w-[80px]">
-                            Specialist in
+                            {t("specialistIn")}
                           </span>
                           <span className="text-base font-bold text-secondary ">
-                            : braces, clear aligners, and bite correction for
-                            all ages
+                            : {t("specialistInVal")}
                           </span>
                         </div>
                       </div>
@@ -468,18 +463,18 @@ export default function DoctorsList() {
                     {/* Available Hours Section */}
                     <div className="bg-[#EEFAFA] rounded-[12px] p-4">
                       <h3 className="text-lg font-semibold text-secondary mb-3">
-                        Available Hours
+                        {t("avilablehr")}
                       </h3>
                       <div className="space-y-2">
                         <p className="text-base font-normal text-secondary">
-                          Sun to Thu: 10:00 AM – 6:00 PM
+                          {t("SunToThu")}
                         </p>
                         <p className="text-base font-normal text-secondary">
-                          Sat: 10:00 AM – 2:00 PM
+                          {t("sat")}: 10:00 AM – 2:00 PM
                         </p>
                         <div className="bg-[#FFE5E5] rounded-[8px] px-3 py-2 mt-3">
                           <p className="text-sm font-normal text-secondary text-center">
-                            Not available on Friday
+                            {t("NotAvailableOnFriday")}
                           </p>
                         </div>
                       </div>

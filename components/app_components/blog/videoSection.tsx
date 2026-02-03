@@ -8,19 +8,21 @@ import video3 from "@/assets/blogs/video3.png";
 import video4 from "@/assets/blogs/video4.png";
 import { CirclePlay } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function VideoSection() {
+  const t = useTranslations("blogPage");
   const [image, setImage] = useState(video0);
   return (
     <div className="px-4 lg:px-12 mb-7 lg:mb-12">
       <div className="flex items-center w-full justify-between mb-6">
         <h1 className="text-secondary text-[16px] lg:text-[48px] font-semibold leading-[23px] lg:leading-[69px] whitespace-nowrap">
-          Real-Time Updates
+          {t("realtimeupdates")}
         </h1>
 
         <div>
           <button className=" px-4 py-1 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-            View All
+            {t("viewall")}
           </button>
         </div>
       </div>

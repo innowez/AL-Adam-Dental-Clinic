@@ -3,44 +3,44 @@
     {
       "id": 1,
       "image": "/blogs/blog1.png",
-      "title": "Daily Oral Care Habits for a Healthy Smile",
-      "description": "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems."
+      "title": "titleb1",
+      "description": "descriptionb1"
     },
     {
       "id": 2,
       "image": "/blogs/blog2.png",
-      "title": "When Should You Visit a Dentist?",
-      "description": "Early signs and symptoms that indicate it’s time to schedule a dental check-up."
+      "title": "titleb2",
+      "description": "descriptionb2"
     },
     {
       "id": 3,
       "image": "/blogs/blog3.png",
-      "title": "Children’s Dental Care: What Parents Should Know",
-      "description": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits."
+      "title": "titleb3",
+      "description": "descriptionb3"
     },
     {
       "id": 4,
       "image": "/blogs/blog3.png",
-      "title": "Children’s Dental Care: What Parents Should Know",
-      "description": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits."
+      "title": "titleb4",
+      "description": "descriptionb4"
     },
     {
       "id": 5,
       "image": "/blogs/blog1.png",
-      "title": "Daily Oral Care Habits for a Healthy Smile",
-      "description": "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems."
+      "title": "titleb5",
+      "description": "descriptionb5"
     },
     {
       "id": 6,
       "image": "/blogs/blog2.png",
-      "title": "When Should You Visit a Dentist?",
-      "description": "Early signs and symptoms that indicate it’s time to schedule a dental check-up."
+      "title": "titleb6",
+      "description": "descriptionb6"
     },
     {
       "id": 7,
       "image": "/blogs/titleblog.png",
-      "title": "Understanding Tooth Anatomy: <br/>Inside and Out",
-      "description": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits."
+      "title": "titleb7",
+      "description": "descriptionb7"
     }
   ]
 }

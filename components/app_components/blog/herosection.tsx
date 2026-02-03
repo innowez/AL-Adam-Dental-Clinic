@@ -1,29 +1,30 @@
 import Image from "next/image";
 import titleImage from "@/assets/blogs/titleblog.png";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("blogPage");
   const topicList = [
-    "Oral Hygiene",
-    "Dental Care",
-    "Cosmetic Dentistry",
-    "Orthodontics",
-    "Children’s Dental Care",
-    "Orthodontics",
-    "Dental Treatments",
+    t("topicList.0"),
+    t("topicList.1"),
+    t("topicList.2"),
+    t("topicList.3"),
+    t("topicList.4"),
+    t("topicList.5"),
+    t("topicList.6"),
   ];
   return (
     <div className="mt-[76px] lg:mt-[126px]">
       <section className="mb-7 lg:mb-12">
         <h1 className="text-center text-[16px] lg:text-[48px] lg:leading-[69px] font-semibold text-secondary">
-          Dental Care Insights
+          {t("title")}
         </h1>
         <p className="text-center text-[12px] lg:text-[20px] lg:leading-[29px] font-normal leading-[17px] text-secondary/75 mb-4 lg:mb-12 ">
-          Explore expert-written articles designed to help you understand{" "}
-          <br className="lg:hidden" />
-          dental health better, <br className="hidden lg:block" />
-          prevent common oral issues, and make <br className="lg:hidden" />
-          informed decisions about your smile.
+          {t("desc1")} <br className="lg:hidden" />
+          {t("desc2")}, <br className="hidden lg:block" />
+          {t("disc3")} <br className="lg:hidden" />
+          {t("disc4")}.
         </p>
         <div className="flex justify-left lg:justify-center gap-2 overflow-x-scroll w-full no-scrollbar px-4 lg:px-0">
           {topicList.map((topic, index) => (
@@ -52,25 +53,22 @@ export default function HeroSection() {
             <div className="mb-6">
               <div className="mb-4 lg:mb-5">
                 <span className="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-[12px] lg:text-[20px]">
-                  Trending
+                  {t("trending")}
                 </span>
               </div>
               <div className="mt-2">
                 <h2 className="text-secondary text-[16px] lg:text-[36px] font-semibold leading-[23px] lg:leading-[52px]">
-                  Understanding Tooth Anatomy: Inside and Out
+                  {t("titleblog")}
                 </h2>
                 <p className="text-secondary/75 text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px]">
-                  Discover how enamel, dentin, and pulp collaborate to safeguard
-                  your teeth and promote lasting oral health. Understanding
-                  their roles is crucial for maintaining a healthy smile over
-                  the years...
+                  {t("descblog")}
                 </p>
               </div>
             </div>
             <div>
               <Link href="/blog/7">
                 <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
-                  Read More
+                  {t("readMore")}
                 </button>
               </Link>
             </div>

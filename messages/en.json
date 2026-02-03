@@ -177,7 +177,19 @@
     "dr2Specialty": "Orthodontics",
 
     "dr4Name": "Dr. Mohammed (MBBS)",
-    "dr4Specialty": "Pediatric Dentistry"
+    "dr4Specialty": "Pediatric Dentistry",
+
+    "bigDesc": "I focus on preventive and cosmetic dental care, helping patients achieve healthy smiles through comfortable and personalized treatments.",
+    "lang": "Language",
+    "aeiou": " Arabic & English",
+    "exp": "Experience",
+    "expVal": "9+ Years",
+    "specialistIn": "Specialist in",
+    "specialistInVal": "braces, clear aligners, and bite correction for all ages",
+    "avilablehr": "Available Hours",
+    "SunToThu": "Sun to Thu",
+    "sat": "Sat",
+    "NotAvailableOnFriday": "Not available on Friday"
   },
 
   "aboutPage": {
@@ -216,6 +228,73 @@
     "receptionandwaitingarea": "Reception and waiting area",
     "sterilizationarea": "Sterilization area",
     "advanceddentalequipment": "Advanced dental equipment"
+  },
+
+  "blogPage": {
+    "title": "Dental Care Insights",
+    "desc1": "Explore expert-written articles designed to help you understand",
+    "desc2": "dental health better,",
+    "disc3": "prevent common oral issues, and make",
+    "disc4": "informed decisions about your smile.",
+    "topicList": [
+      "Oral Hygiene",
+      "Dental Care",
+      "Cosmetic Dentistry",
+      "Orthodontics",
+      "Children’s Dental Care",
+      "Orthodontics",
+      "Dental Treatments"
+    ],
+    "trending": "Trending",
+    "titleblog": "Understanding Tooth Anatomy: Inside and Out",
+    "descblog": "Discover how enamel, dentin, and pulp collaborate to safeguard your teeth and promote lasting oral health. Understanding their roles is crucial for maintaining a healthy smile over the years...",
+    "readMore": "Read More",
+
+    "realtimeupdates": "Real-Time Updates",
+    "viewall": "View All",
+    "articles": "Articles",
+
+    "titleb1": "Daily Oral Care Habits for a Healthy Smile",
+    "descriptionb1": "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems.",
+    "titleb2": "When Should You Visit a Dentist?",
+    "descriptionb2": "Early signs and symptoms that indicate it’s time to schedule a dental check-up.",
+    "titleb3": "Children’s Dental Care: What Parents Should Know",
+    "descriptionb3": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits.",
+    "titleb4": "Children’s Dental Care: What Parents Should Know",
+    "descriptionb4": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits.",
+    "titleb5": "Daily Oral Care Habits for a Healthy Smile",
+    "descriptionb5": "Simple daily routines that can help prevent cavities, gum disease, and long-term dental problems.",
+    "titleb6": "When Should You Visit a Dentist?",
+    "descriptionb6": "Early signs and symptoms that indicate it’s time to schedule a dental check-up.",
+    "titleb7": "Understanding Tooth Anatomy: <br/>Inside and Out",
+    "descriptionb7": "A guide to maintaining healthy teeth for children, from early habits to regular dental visits.",
+
+    "readTime": "Read Time",
+    "min": "min",
+    "published": "Published",
+    "march": "March 2026",
+    "whatIsToothAnatomy": "What Is Tooth Anatomy?",
+    "blogdis1": "A tooth is a complex structure composed of multiple layers, each serving a unique and vital function. While we typically only observe the outer enamel surface, there are several crucial structures that lie beneath it. These layers work together to protect the tooth from decay and damage, while also providing the necessary support for the chewing process. The inner layers, such as dentin and pulp, play significant roles in maintaining the health and functionality of the tooth, ensuring that we can effectively bite and grind our food.",
+    "mainParts": "Main Parts of a Tooth",
+    "enamel": "Enamel",
+    "enamilDis": "Enamel is the hard outer layer of the tooth. It protects against daily wear, bacteria, and temperature changes.",
+    "dentin": "Dentin",
+    "dentinDis": "Dentin lies beneath the enamel and is less hard but more sensitive. It supports the enamel and transmits sensations like heat and cold.",
+    "pulp": "Pulp",
+    "pulpdis": "The pulp is the soft inner tissue containing nerves and blood vessels. It keeps the tooth alive and responsive.",
+    "supportingStructures": "Supporting Structures",
+    "gums": "Gums (Gingiva)",
+    "gumsDis": "Gums protect the base of the teeth and help keep them securely in place.Gums protect the base of the teeth and help keep them securely in place.",
+    "root": "Root & Jawbone",
+    "rootDis": "The root anchors the tooth in the jawbone, providing stability and support for chewing.",
+    "anatomyMatters": "Why Tooth Anatomy Matters",
+    "anatomyMattersDis": "Understanding the structure of a tooth is crucial for grasping the significance of maintaining good dental hygiene, scheduling regular check-ups, and seeking early treatment when necessary. Each layer of a tooth plays a vital role in its overall health, and if damage occurs to one layer, it can have a cascading effect on the entire tooth if not addressed promptly. This interconnectedness highlights the importance of proactive dental care to prevent more serious issues down the line.",
+    "preventiveCareTips": "Preventive Care Tips",
+    "toothpaste": "Brush twice daily with fluoride toothpaste",
+    "floss": "Floss to remove plaque between teeth",
+    "sugaryFoods": "Avoid excessive sugary foods",
+    "dentistVisit": "Visit your dentist regularly for check-ups and cleanings",
+    "youMayAlsoLike": "You May Also Like"
   },
 
   "headerFooter": {
