@@ -66,7 +66,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div>
-              <Link href="/blog/7">
+              <Link href="/blog/5">
                 <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
                   {t("readMore")}
                 </button>

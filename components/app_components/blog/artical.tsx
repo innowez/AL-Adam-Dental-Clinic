@@ -27,11 +27,14 @@ export default function Artical() {
             />
             <div className="min-h-[125px] lg:min-h-[208px] flex flex-col justify-between">
               <div>
-                <h2 className="text-[16px] lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary mb-2">
-                  {t(article.title)}
-                </h2>
+                <h2
+                  className="text-[16px] lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary mb-2"
+                  dangerouslySetInnerHTML={{ __html: t(article.title) }}
+                />
                 <p className="text-[12px] lg:text-[16px] font-normal leading-[17px] lg:leading-[23px] text-secondary/75 mb-2">
-                  {t(article.description)}
+                  {t(article.description).length > 100
+                    ? t(article.description).slice(0, 100) + "..."
+                    : t(article.description)}
                 </p>
               </div>
               <div>

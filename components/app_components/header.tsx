@@ -258,13 +258,11 @@ function Header() {
                       viewBox="0 0 23 20"
                     >
                       <path
-                        fill={isHomePage ? "#fff" : "#2c2e83"}
+                        fill="#2c2e83"
                         d="m10.9 20 4.55-12h2.1l4.55 12H20l-1.075-3.05h-4.85L13 20zM3 17l-1.4-1.4 5.05-5.05a11.6 11.6 0 0 1-1.588-2Q4.349 7.425 3.75 6h2.1q.5.975 1 1.7t1.2 1.45q.825-.825 1.713-2.313T11.1 4H0V2h7V0h2v2h7v2h-2.9q-.525 1.8-1.575 3.7T9.45 10.6l2.4 2.45-.75 2.05-3.05-3.125zm11.7-1.8h3.6l-1.8-5.1z"
                       ></path>
                     </svg>
-                    <span
-                      className={`${isHomePage ? "text-white" : "text-tertiary"} font-medium text-[20px]`}
-                    >
+                    <span className={`text-tertiary font-medium text-[20px]`}>
                       {nextLocale === "ar" ? "العربية" : "English"}
                     </span>
                   </button>

@@ -2,42 +2,30 @@
   "articleList": [
     {
       "id": 1,
-      "image": "/blogs/blog1.png",
+      "image": "/blogs/blogs2.png",
       "title": "titleb1",
       "description": "descriptionb1"
     },
     {
       "id": 2,
-      "image": "/blogs/blog2.png",
+      "image": "/blogs/blogs1.jpeg",
       "title": "titleb2",
       "description": "descriptionb2"
     },
     {
       "id": 3,
-      "image": "/blogs/blog3.png",
+      "image": "/blogs/blogs3.jpeg",
       "title": "titleb3",
       "description": "descriptionb3"
     },
     {
       "id": 4,
-      "image": "/blogs/blog3.png",
+      "image": "/blogs/blogs4.jpeg",
       "title": "titleb4",
       "description": "descriptionb4"
     },
     {
       "id": 5,
-      "image": "/blogs/blog1.png",
-      "title": "titleb5",
-      "description": "descriptionb5"
-    },
-    {
-      "id": 6,
-      "image": "/blogs/blog2.png",
-      "title": "titleb6",
-      "description": "descriptionb6"
-    },
-    {
-      "id": 7,
       "image": "/blogs/titleblog.png",
       "title": "titleb7",
       "description": "descriptionb7"
