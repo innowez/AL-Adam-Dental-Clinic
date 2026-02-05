@@ -22,7 +22,7 @@ export default async function BlogDetail({
 
   return (
     <section className="mt-[76px] lg:mt-[126px]">
-      <div className="px-4 lg:px-52 mb-7 lg:mb-12 ">
+      <div className="px-4 lg:px-24 xl:px-52 mb-7 lg:mb-12 ">
         <h1
           className="text-secondary text-xl lg:text-[48px] leading-[29px] lg:leading-[69px] font-semibold mb-3 lg:mb-6"
           dangerouslySetInnerHTML={{
@@ -163,7 +163,7 @@ export default async function BlogDetail({
             {t("youMayAlsoLike")}
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8 mb-6 lg:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8 mb-6 lg:mb-12">
             {articleList.slice(0, 3).map((article, index) => (
               <div key={index + 1}>
                 <Image

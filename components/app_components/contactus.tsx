@@ -6,26 +6,32 @@ import { useTranslations } from "next-intl";
 export default function Contactus() {
   const t = useTranslations("contactUs");
   return (
-    <section className="mb-6 flex flex-col xl:flex-row gap-2">
-      <div className="bg-[#EEFAFA] rounded-[16px] p-2 lg:p-9 mb-4 lg:mb-0 lg:w-full">
-        <h1 className="text-[16px] lg:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px] mb-2">
-          {t("title")}
-        </h1>
+    <section className="mb-6 flex flex-col md:flex-row gap-2">
+      <div className="bg-[#EEFAFA] rounded-[16px] p-2 md:p-4 lg:p-9 mb-4 md:mb-0 w-full md:w-1/2 lg:w-[60%] flex flex-col justify-between">
+        <div className="flex flex-col justify-between">
+          <h1 className="text-[16px] sm:text-[24px] lg:text-[32px] xl:text-[48px] font-semibold text-secondary leading-6 lg:leading-[69px] mb-2">
+            {t("title")}
+          </h1>
 
-        <h2 className="text-[12px] lg:text-[16px] font-normal text-secondary leading-4 lg:leading-[22px] mb-6">
-          {t("description")}
-        </h2>
-        <div className="lg:h-[356px] sm:w-full sm:h-full " id="contact">
+          <h2 className="text-[12px] sm:text-[16px] xl:text-[20px] font-normal text-secondary leading-4 sm:leading-[18px] lg:leading-[22px] mb-6">
+            {t("description")}
+          </h2>
+
+          <div></div>
+        </div>
+        <div
+          className="lg:h-[356px] h-[228px] w-full md:h-[359px]  relative "
+          id="contact"
+        >
           <Image
             src={mapImage.src}
             alt="mapImage"
-            width={704}
-            height={359}
-            className="rounded-[16px] h-[228px] w-[345px] sm:h-full sm:w-full xl:h-[359px] xl:w-[704px]"
+            fill
+            className="absolute object-cover top-0 left-0 bottom-0 right-0 rounded-[16px] h-full w-full "
           />
         </div>
       </div>
-      <div className="bg-[#EEFAFA] rounded-[16px] py-4 px-4 lg:py-9 lg:px-12 lg:min-w-[548px] ">
+      <div className="bg-[#EEFAFA] rounded-[16px] py-4 px-4 lg:py-9 lg:px-12 md:w-1/2 lg:w-[548px] ">
         <form action="" className="flex flex-col gap-2 lg:gap-5">
           <div className="flex flex-col gap-1">
             <label

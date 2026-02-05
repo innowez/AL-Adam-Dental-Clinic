@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import logo from "@/assets/landing/footerLogo.png";
 import Link from "next/link";
@@ -5,6 +7,9 @@ import { useTranslations } from "next-intl";
 
 function Footer() {
   const t = useTranslations("headerFooter");
+  const linkToWhatsapp = () => {
+    window.open("https://wa.me/+96871767600", "_blank");
+  };
   return (
     <footer
       style={{
@@ -126,7 +131,10 @@ function Footer() {
           Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights Reserved.
         </p>
         <div className="flex gap-2">
-          <div className="w-9 h-9 flex items-center justify-center rounded-full bg-white">
+          <div
+            onClick={linkToWhatsapp}
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-white cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"

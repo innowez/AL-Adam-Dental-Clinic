@@ -173,7 +173,7 @@ function ServiceList() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 ">
         {filteredList.map((item, index) => (
           <div key={index} className="border border-secondary rounded-3xl p-2 ">
             <Image

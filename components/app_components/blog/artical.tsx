@@ -15,7 +15,7 @@ export default function Artical() {
         {t("articles")}
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-4 lg:gap-y-8">
         {articleList.slice(0, 6).map((article, index) => (
           <div key={index + 1}>
             <Image

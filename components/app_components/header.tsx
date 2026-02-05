@@ -34,7 +34,7 @@ function Header() {
   };
 
   const linkToWhatsapp = () => {
-    window.open("https://wa.me/971557777777", "_blank");
+    window.open("https://wa.me/+96871767600", "_blank");
   };
 
   return (

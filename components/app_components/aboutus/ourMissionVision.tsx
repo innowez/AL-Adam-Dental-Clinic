@@ -29,15 +29,15 @@ function OurMissionVision() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 md:grid-rows-5 gap-y-3 lg:gap-x-24 lg:gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 md:grid-rows-5 gap-y-3 md:gap-x-10 lg:gap-x-24 lg:gap-y-12">
         <div className="md:row-span-2 ">
-          <h1 className=" text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-center md:text-left text-secondary mb-2 lg:mb-6">
+          <h1 className=" text-[20px] sm:text-2xl lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-center md:text-left text-secondary mb-2 lg:mb-6">
             {t("vision")}
           </h1>
-          <h2 className="text-base lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary text-center md:text-left ">
+          <h2 className="text-base sm:text-xl lg:text-[24px] font-semibold leading-[23px] sm:leading-7 lg:leading-[35px] text-secondary text-center md:text-left ">
             {t("visionTitle")}
           </h2>
-          <p className="text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px] text-secondary/60 text-center md:text-left">
+          <p className="text-[12px] sm:text-lg lg:text-[20px] leading-[17px] sm:leading-6 lg:leading-[29px] text-secondary/60 text-center md:text-left">
             {t("visionDescription")}
           </p>
         </div>
@@ -50,7 +50,7 @@ function OurMissionVision() {
           />
         </div>
 
-        <div className="order-4 md:order-3 md:row-span-3 md:col-start-2 md:row-start-1 relative h-[405px] lg:h-[567px]">
+        <div className="order-4 md:order-3 md:row-span-3 md:col-start-2 md:row-start-1 relative h-[405px] md:h-[567px] lg:h-[567px]">
           <Image
             className="w-full h-full object-cover rounded-4xl absolute"
             fill
@@ -60,15 +60,15 @@ function OurMissionVision() {
         </div>
 
         <div className="order-3 md:order-4 md:row-span-2 md:col-start-2 md:row-start-4 ">
-          <h1 className="text-[20px] lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-center md:text-left text-secondary mb-2 lg:mb-6">
+          <h1 className="text-[20px] sm:text-2xl lg:text-[48px] font-semibold leading-[29px] lg:leading-[69px] text-center md:text-left text-secondary mb-2 lg:mb-6">
             {t("mission")}
           </h1>
 
-          <h2 className="text-base lg:text-[24px] font-semibold leading-[23px] lg:leading-[35px] text-secondary text-center md:text-left">
+          <h2 className="text-base sm:text-xl lg:text-[24px] font-semibold leading-[23px] sm:leading-7 lg:leading-[35px] text-secondary text-center md:text-left">
             {t("missionTitle")}
           </h2>
 
-          <p className="text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px] text-secondary/60 text-center md:text-left">
+          <p className="text-[12px] sm:text-lg lg:text-[20px] leading-[17px] sm:leading-6 lg:leading-[29px] text-secondary/60 text-center md:text-left">
             {t("missionDescription")}
           </p>
         </div>

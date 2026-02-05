@@ -18,7 +18,7 @@ export default function Testmonies() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 lg:justify-center gap-3 lg:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:justify-center gap-3 lg:gap-6">
         <div className="py-[18px] lg:py-0 ">
           <div
             className="rounded-[44px] py-[51px] px-[24px] lg:h-[332px] flex items-end relative"
@@ -47,7 +47,7 @@ export default function Testmonies() {
             src={testimonial1.src}
             alt="testimonial1"
             fill
-            className="object-cover max-h-[172px] lg:max-h-[332px] lg:w-[432px]"
+            className="object-cover max-h-[172px] md:max-h-full lg:max-h-[332px] lg:w-[432px]"
           />
           <div
             className="absolute top-0 left-0 w-full h-full z-10 "
@@ -86,7 +86,7 @@ export default function Testmonies() {
             src={testimonial2.src}
             alt="testimonial2"
             fill
-            className="object-cover object-bottom max-h-[172px] lg:max-h-[332px] lg:w-full"
+            className="object-cover object-bottom max-h-[172px] md:max-h-full lg:max-h-[332px] lg:w-full"
           />
           <div
             className="absolute top-0 left-0 w-full h-full z-10 "
@@ -125,7 +125,7 @@ export default function Testmonies() {
             src={testimonial3.src}
             alt="testimonial3"
             fill
-            className="object-cover max-h-[172px] lg:max-h-[332px] lg:w-full"
+            className="object-cover max-h-[172px] md:max-h-full lg:max-h-[332px] lg:w-full"
           />
           <div
             className="absolute top-0 left-0 w-full h-full z-10 "
