@@ -40,11 +40,11 @@ export default function VideoSection() {
             {t("realtimeupdates")}
           </h1>
 
-          <div>
+          {/* <div>
             <button className=" px-4 py-1 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
               {t("viewall")}
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div>

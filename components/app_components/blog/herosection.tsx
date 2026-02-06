@@ -2,8 +2,11 @@ import Image from "next/image";
 import titleImage from "@/assets/blogs/titleblog.png";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import blogList from "@/lib/blog.json";
 
 export default function HeroSection() {
+  const articleList = blogList.articleList;
+
   const t = useTranslations("blogPage");
   const topicList = [
     t("topicList.0"),
@@ -42,7 +45,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row mb-5 lg:mb-12">
           <div className="w-full lg:w-1/2 h-[253px] lg:h-[446px] rounded-[12px] lg:rounded-[20px] overflow-hidden mb-5 lg:mb-0">
             <Image
-              src={titleImage}
+              src={articleList[1].image}
               width={709}
               height={446}
               alt=""
@@ -57,16 +60,19 @@ export default function HeroSection() {
                 </span>
               </div>
               <div className="mt-2">
-                <h2 className="text-secondary text-[16px] lg:text-[36px] font-semibold leading-[23px] lg:leading-[52px]">
-                  {t("titleblog")}
-                </h2>
+                <h2
+                  className="text-secondary text-[16px] lg:text-[36px] font-semibold leading-[23px] lg:leading-[52px]"
+                  dangerouslySetInnerHTML={{ __html: t(articleList[1].title) }}
+                ></h2>
                 <p className="text-secondary/75 text-[12px] lg:text-[20px] leading-[17px] lg:leading-[29px]">
-                  {t("descblog")}
+                  {t(articleList[1].description).length > 200
+                    ? t(articleList[1].description).slice(0, 200) + "..."
+                    : t(articleList[1].description)}
                 </p>
               </div>
             </div>
             <div>
-              <Link href="/blog/5">
+              <Link href="/blog/2">
                 <button className="cursor-pointer px-4 py-2 rounded-full bg-primary text-white text-[12px] lg:text-[20px] ">
                   {t("readMore")}
                 </button>
