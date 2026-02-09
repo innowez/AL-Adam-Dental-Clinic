@@ -44,6 +44,7 @@ export default function Contactus() {
               type="text"
               id="name"
               placeholder={t("pname")}
+              required
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             />
           </div>
@@ -72,6 +73,7 @@ export default function Contactus() {
               type="tel"
               id="phone_number"
               placeholder={t("pphoneNumber")}
+              required
               className="rounded-[8px] px-4 py-[11.5px] bg-white placeholder:text-[#22499866] "
             />
           </div>

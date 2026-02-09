@@ -128,7 +128,8 @@ function Footer() {
 
       <div className="flex justify-between items-center">
         <p className="text-[12px] lg:text-base font-normal text-white leading-4 lg:leading-[23px] ">
-          Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights Reserved.
+          +968 7176 7600 Copyright ©2026 Al Adam Dental Clinic, Inc. All Rights
+          Reserved.
         </p>
         <div className="flex gap-2">
           <div
